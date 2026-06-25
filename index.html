@@ -53,16 +53,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:cent
 @media(max-width:920px){.nav-links{display:none}}
 
 /* layout */
-section{position:relative;z-index:2;padding:clamp(64px,9vw,120px) clamp(18px,5vw,40px);max-width:1240px;margin:0 auto}
-.eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:'Bai Jamjuree';font-weight:600;font-size:.8rem;
-  letter-spacing:.16em;text-transform:uppercase;color:var(--leaf);margin-bottom:18px}
-.eyebrow::before{content:"";width:30px;height:2px;background:var(--lime)}
-h2{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:700;line-height:1.12;color:var(--forest);letter-spacing:-.015em;margin-bottom:14px}
-.sec-intro{font-size:1.08rem;color:var(--ink-soft);max-width:760px;margin-bottom:42px}
-h3{font-size:1.18rem;font-weight:600;color:var(--forest);margin-bottom:8px}
+section{position:relative;z-index:2;padding:clamp(78px,9vw,132px) clamp(20px,5vw,44px);max-width:1240px;margin:0 auto}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Bai Jamjuree';font-weight:600;font-size:.84rem;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--leaf);margin-bottom:22px}
+.eyebrow::before{content:"";width:32px;height:2px;background:var(--lime)}
+h2{font-size:clamp(2.1rem,4.6vw,3.15rem);font-weight:700;line-height:1.08;color:var(--forest);letter-spacing:-.02em;margin-bottom:18px}
+.sec-intro{font-size:1.12rem;color:var(--ink-soft);max-width:780px;margin-bottom:52px;line-height:1.6}
+h3{font-size:1.4rem;font-weight:700;color:var(--forest);margin-bottom:10px;line-height:1.25}
 
 /* hero */
-#hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding-top:130px;max-width:1240px}
+#hero{min-height:auto;display:flex;flex-direction:column;justify-content:center;padding-top:clamp(150px,17vh,196px);padding-bottom:clamp(82px,10vh,120px);max-width:1240px}
 .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}
 @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:30px}}
 .hero-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(15,61,43,.06);border:1px solid var(--line);
@@ -94,7 +94,7 @@ h1 .hl::after{content:"";position:absolute;left:0;right:0;bottom:.08em;height:.3
 .grid{display:grid;gap:20px}
 .g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
 @media(max-width:880px){.g2,.g3,.g4{grid-template-columns:1fr}}
-.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px;box-shadow:var(--shadow-sm);
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:30px;box-shadow:var(--shadow-sm);
   position:relative;transition:transform .3s,box-shadow .3s;overflow:hidden}
 .card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
 .card.accent{border-top:4px solid var(--leaf)}
@@ -104,10 +104,10 @@ h1 .hl::after{content:"";position:absolute;left:0;right:0;bottom:.08em;height:.3
   background:rgba(46,158,91,.12)}
 .stat-big{font-family:'Bai Jamjuree';font-weight:700;font-size:2.6rem;line-height:1;color:var(--forest);letter-spacing:-.02em}
 .stat-big small{font-size:1rem;color:var(--muted);font-weight:600}
-.stat-k{font-size:.92rem;color:var(--ink-soft);margin-top:8px}
-.lead{color:var(--ink-soft);font-size:.98rem}
+.stat-k{font-size:.96rem;color:var(--ink-soft);margin-top:10px;line-height:1.5}
+.lead{color:var(--ink-soft);font-size:1rem;line-height:1.62}
 ul.ticks{list-style:none;margin-top:10px}
-ul.ticks li{position:relative;padding-left:26px;margin-bottom:9px;font-size:.97rem;color:var(--ink-soft)}
+ul.ticks li{position:relative;padding-left:26px;margin-bottom:12px;font-size:1rem;color:var(--ink-soft);line-height:1.55}
 ul.ticks li::before{content:"";position:absolute;left:0;top:.55em;width:9px;height:9px;border-radius:3px;
   background:var(--lime);box-shadow:0 0 0 4px rgba(154,222,63,.2)}
 
@@ -145,8 +145,22 @@ ul.ticks li::before{content:"";position:absolute;left:0;top:.55em;width:9px;heig
 .tier.t2 .badge{background:linear-gradient(150deg,var(--teal),#0a6f6e)}
 .tier.t3 .badge{background:linear-gradient(150deg,var(--amber),#c47d18)}
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-.tag{font-size:.82rem;background:rgba(15,61,43,.06);border:1px solid var(--line);padding:5px 12px;border-radius:8px;color:var(--forest2);font-weight:500}
+.tag{font-size:.9rem;background:rgba(15,61,43,.06);border:1px solid var(--line);padding:7px 14px;border-radius:9px;color:var(--forest2);font-weight:500}
 .tag.hot{background:rgba(242,168,59,.16);border-color:rgba(242,168,59,.4);color:#9a6612}
+/* competitor comparison table */
+.cmp-scroll{overflow-x:auto;border-radius:var(--r);box-shadow:var(--shadow-sm);border:1px solid var(--line);background:var(--card)}
+.cmp-table{width:100%;border-collapse:collapse;min-width:820px}
+.cmp-table th,.cmp-table td{text-align:left;padding:18px 22px;vertical-align:top;border-bottom:1px solid var(--line);font-size:.98rem;line-height:1.5}
+.cmp-table thead th{background:var(--forest);color:#eafff2;font-family:'Bai Jamjuree';font-weight:600;font-size:1rem;letter-spacing:.01em}
+.cmp-table thead th.gap-col{background:#0a2c1f;color:var(--lime)}
+.cmp-table tbody tr:hover{background:rgba(46,158,91,.04)}
+.cmp-table td b{color:var(--forest);font-family:'Bai Jamjuree';font-size:1.05rem}
+.cmp-table .ptype{display:block;font-size:.84rem;color:var(--muted);font-weight:500;margin-top:4px;font-family:'Anuphan'}
+.cmp-table td:last-child{background:rgba(154,222,63,.09);color:var(--forest2);font-weight:500}
+.cmp-table tr.cppc-row td{background:rgba(46,158,91,.13);border-bottom:none;font-weight:600}
+.cmp-table tr.cppc-row td:first-child b{color:var(--leaf)}
+.cmp-table tr.cppc-row td:last-child{background:rgba(46,158,91,.22);color:var(--forest)}
+.gap-callout{margin-top:24px;border-top:4px solid var(--lime)}
 
 /* region rollout */
 .rollout{display:flex;gap:0;flex-wrap:wrap;counter-reset:r;margin-top:8px}
@@ -195,8 +209,8 @@ footer a{color:var(--lime);text-decoration:none}
 .reveal.visible{opacity:1;transform:none}
 .reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}.reveal.d4{transition-delay:.32s}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
-.section-tag{font-size:.78rem;color:var(--muted);font-family:'Bai Jamjuree';font-weight:600}
-.note{font-size:.84rem;color:var(--muted);margin-top:14px;font-style:italic}
+.section-tag{font-size:.86rem;color:var(--muted);font-family:'Bai Jamjuree';font-weight:600}
+.note{font-size:.9rem;color:var(--muted);margin-top:16px;font-style:italic;line-height:1.55}
 .divider-quote{font-family:'Bai Jamjuree';font-weight:600;font-size:clamp(1.3rem,3vw,2rem);color:var(--forest);
   text-align:center;max-width:900px;margin:0 auto;line-height:1.4}
 .divider-quote .em{color:var(--leaf)}
@@ -315,45 +329,67 @@ footer a{color:var(--lime);text-decoration:none}
 <!-- COMPETITION -->
 <section id="competition">
   <div class="eyebrow reveal">03 · คู่แข่ง</div>
-  <h2 class="reveal">ใครอยู่ในสนามนี้บ้าง</h2>
-  <p class="sec-intro reveal">คู่แข่งไทยมีจริงและถือใบเซอร์แล้ว ส่วนจีนคือแหล่งเรซิน+ถุงราคาถูก — CPPC ต้องชนะด้วย scale + ช่องทางในเครือ + supply continuity</p>
+  <h2 class="reveal">เทียบคู่แข่ง — และช่องที่ CPPC แทรกได้</h2>
+  <p class="sec-intro reveal">คู่แข่งแต่ละกลุ่มมีจุดอ่อนต่างกัน ตารางนี้ชี้ "ช่องว่าง" ที่ CPPC เสียบขายได้ทันที</p>
 
-  <div class="grid g2">
-    <div class="card accent reveal">
-      <h3>🇹🇭 คู่แข่งไทย (ผู้แปรรูปถุง)</h3>
-      <ul class="ticks">
-        <li><b>TPBI</b> (จดทะเบียน SET) — แบรนด์ "BioPlus" compostable, EN 13432 โดย DIN CERTCO</li>
-        <li><b>Thantawan Industry</b> — 40+ ปี, DIN CERTCO Seedling + BPI (สหรัฐ)</li>
-        <li><b>Bio Sure®</b> — ฉลาก GC Compostable</li>
-        <li><b>Bags &amp; Gloves</b> — PBAT+PLA จริง, TÜV Austria 180 วัน, ขายออนไลน์แบบขอใบเสนอราคา</li>
-        <li><b>Pack &amp; Save · KW Plastics · Bio-Eco · Advance Bio</b></li>
-      </ul>
-      <p class="note">ส่วนแบ่งตลาดรายเจ้า: ไม่มีข้อมูลสาธารณะ <span class="chip r">🔴 แนะนำดึง DBD</span></p>
-    </div>
-    <div class="card accent-amber reveal d1">
-      <h3>🇨🇳 คู่แข่ง/แหล่งวัสดุจีน</h3>
-      <ul class="ticks">
-        <li><b>Kingfa</b> — 274,000 ตัน biobased plastics (2024) ใหญ่ระดับโลก</li>
-        <li><b>Wanhua Chemical</b> — แบรนด์ "Waneco" (PBAT/PLA/PBS), แผน 60,000 ตัน/ปี</li>
-        <li>จีน = ผู้ส่งออก PBAT รายใหญ่สุด (~30% ของ biodegradable โลก)</li>
-        <li>OEM นับไม่ถ้วนบน Alibaba/1688 → ความเสี่ยงถุงนำเข้าราคาถูก</li>
-      </ul>
-      <h3 style="margin-top:18px">🧪 แหล่งวัสดุไทย (hedge)</h3>
-      <ul class="ticks">
-        <li><b>PTT MCC BioPBS</b> — JV GC×Mitsubishi, 20,000 ตัน/ปี (PBS จากอ้อย/มัน/ข้าวโพด)</li>
-        <li><b>Thai Wah (TWPC)</b> — TPS/แป้งดัดแปร</li>
-      </ul>
+  <div class="reveal">
+    <div class="cmp-scroll">
+      <table class="cmp-table">
+        <thead>
+          <tr>
+            <th>ผู้เล่น</th>
+            <th>✅ จุดเด่น</th>
+            <th>⚠️ จุดด้อย</th>
+            <th class="gap-col">🎯 ช่องให้ CPPC แทรก</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>TPBI</b><span class="ptype">ไทย · SET-listed · "BioPlus"</span></td>
+            <td>แบรนด์ใหญ่ ส่งออก · เซอร์ EN 13432 (DIN CERTCO)</td>
+            <td>เน้นส่งออก/ราคาสูง · ไม่มีช่องทางในเครือ CP</td>
+            <td>ใช้ช่อง <b>ในเครือ CP ALL/AXTRA</b> + ราคาเรซินกลุ่ม CP</td>
+          </tr>
+          <tr>
+            <td><b>Thantawan</b><span class="ptype">ไทย · 40+ ปี</span></td>
+            <td>เซอร์ครบ (Seedling + BPI) · ประสบการณ์สูง</td>
+            <td>สเกล/ช่องทางจำกัด · ไม่ใช่ผู้นำต้นทุน</td>
+            <td><b>Capacity 2,000 ตัน/ด.</b> + field sales ทุกภาค</td>
+          </tr>
+          <tr>
+            <td><b>Bio Sure / Bags&amp;Gloves</b><span class="ptype">ไทย · SME</span></td>
+            <td>PBAT/PLA จริง · มี TÜV / GC label</td>
+            <td>กำลังผลิตจำกัด · ขายแบบ "ขอใบเสนอราคา"</td>
+            <td><b>Supply continuity</b> + บริการครอบคลุมภูมิภาค</td>
+          </tr>
+          <tr>
+            <td><b>นำเข้าจีน</b><span class="ptype">Kingfa · Wanhua · OEM</span></td>
+            <td>ราคาถูกสุด · กำลังผลิตล้น (~15 ล้านตัน/ปี)</td>
+            <td>Lead time นาน · ไม่มีบริการ/เซอร์ในไทย · เสี่ยงหลังการขาย</td>
+            <td><b>ผลิตในไทย</b> + service + เซอร์ + ส่งเร็ว</td>
+          </tr>
+          <tr class="cppc-row">
+            <td><b>CPPC (เรา)</b><span class="ptype">ไทย · โรงงานเครือ CP</span></td>
+            <td>Capacity จริง + ช่องในเครือ + เรซินกลุ่ม CP + เซลส์ทุกภาค</td>
+            <td>Premium ยังสูง (แก้ด้วยเกม gauge) · เซอร์กำลังออก ก.ค.–ก.ย. 69</td>
+            <td>= จุดยืน: รวมข้อที่คู่แข่งมีไม่ครบในเจ้าเดียว</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
-  <div class="card reveal d2" style="margin-top:20px;border-top:4px solid var(--leaf)">
-    <h3>🏆 ทำไม CPPC ชนะได้</h3>
-    <div class="tags">
-      <span class="tag hot">เครือ CP = ช่องทาง+เรซินกลุ่มปิโตรเคมี</span>
-      <span class="tag">Capacity ระดับโรงงานจริง 2,000 ตัน/ด.</span>
+
+  <div class="card reveal d1 gap-callout">
+    <h3>🕳️ ช่องว่างตลาด = โอกาสของ CPPC</h3>
+    <p class="lead">ไม่มีคู่แข่งรายไหน <b>รวม scale โรงงาน + ช่องทางในเครือ + field sales ทุกภาค + ต้นทุนเรซินกลุ่ม CP</b> ได้พร้อมกัน — นั่นคือช่องที่ CPPC เสียบขายได้ทันที</p>
+    <div class="tags" style="margin-top:14px">
+      <span class="tag hot">เครือ CP = ช่องทาง + เรซิน</span>
+      <span class="tag">Capacity 2,000 ตัน/ด.</span>
       <span class="tag">Supply continuity</span>
       <span class="tag hot">Field sales ทุกภูมิภาค</span>
-      <span class="tag">เกม gauge ปิดช่องว่างราคา</span>
+      <span class="tag">เกม gauge ปิดราคา</span>
     </div>
+    <p class="note">แหล่งวัสดุไทยเป็น hedge: PTT MCC BioPBS (GC×Mitsubishi, 20,000 ตัน/ปี) · Thai Wah TPS — ส่วนแบ่งตลาดรายเจ้ายังไม่มีข้อมูลสาธารณะ <span class="chip r">🔴 ดึง DBD</span></p>
   </div>
 </section>
 
