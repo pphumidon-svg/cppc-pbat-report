@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PBAT Market Intelligence 2569 — ถุงหูหิ้ว & ถุงกระตุกย่อยสลายได้ | CPPC</title>
-<meta name="description" content="รายงานข่าวกรองเชิงกลยุทธ์ตลาดถุงหูหิ้ว/ถุงกระตุก PBAT ย่อยสลายได้ ประเทศไทย 2569 — เพื่อผู้บริหารและทีมขายภาคสนาม CPPC">
+<title>Biodegradable Bag Market Intelligence 2569 — ถุงย่อยสลายได้ | CPPC</title>
+<meta name="description" content="รายงานข่าวกรองเชิงกลยุทธ์ตลาดถุงย่อยสลายได้ (Biodegradable/Compostable) ประเทศไทย 2569 — เพื่อผู้บริหารและทีมขายภาคสนาม CPPC">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -22,6 +22,7 @@
   --amber:        #c87020;
   --amber-soft:   rgba(200,112,32,.13);
   --coral:        #c84530;
+  --coral-soft:   rgba(200,69,48,.08);
   --navy:         #1a2d47;
 
   --cream:        #f3f5ef;
@@ -54,7 +55,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Progress bar */
 #progress {
   position: fixed; top: 0; left: 0; height: 3px; width: 0; z-index: 70;
   background: linear-gradient(90deg, var(--forest), var(--lime));
@@ -79,8 +79,7 @@ nav.scrolled { box-shadow: 0 4px 20px -12px rgba(8,28,18,.28); }
 }
 .nav-brand .dot {
   width: 11px; height: 11px; border-radius: 50%;
-  background: var(--lime);
-  box-shadow: 0 0 0 4px rgba(116,181,46,.18);
+  background: var(--lime); box-shadow: 0 0 0 4px rgba(116,181,46,.18);
 }
 .nav-links { display: flex; gap: 2px; }
 .nav-links a {
@@ -94,13 +93,12 @@ nav.scrolled { box-shadow: 0 4px 20px -12px rgba(8,28,18,.28); }
   background: var(--cream2); border: 1px solid var(--border);
   padding: 4px 10px; border-radius: 999px; white-space: nowrap;
 }
-@media(max-width:960px) { .nav-links { display: none; } .nav-date { display: none; } }
+@media(max-width:1040px) { .nav-links { display: none; } .nav-date { display: none; } }
 
 /* ── Layout helpers ─────────────────────────────── */
 .wrap {
   max-width: 1280px; margin: 0 auto;
-  padding-left: clamp(18px,5vw,48px);
-  padding-right: clamp(18px,5vw,48px);
+  padding-left: clamp(18px,5vw,48px); padding-right: clamp(18px,5vw,48px);
 }
 .section {
   padding: clamp(68px,8vw,116px) clamp(18px,5vw,48px);
@@ -113,19 +111,25 @@ nav.scrolled { box-shadow: 0 4px 20px -12px rgba(8,28,18,.28); }
 }
 .sec-label::before {
   content: ''; width: 26px; height: 2px;
-  background: linear-gradient(90deg, var(--lime), var(--forest-mid));
-  border-radius: 2px;
+  background: linear-gradient(90deg, var(--lime), var(--forest-mid)); border-radius: 2px;
 }
 h2 {
   font-size: clamp(1.85rem, 4.1vw, 2.9rem);
   font-weight: 700; line-height: 1.1;
-  color: var(--forest-dark); letter-spacing: -.022em;
-  margin-bottom: 14px;
+  color: var(--forest-dark); letter-spacing: -.022em; margin-bottom: 14px;
 }
 .sec-intro {
   font-size: 1.04rem; color: var(--ink-mid);
   max-width: 760px; margin-bottom: 46px; line-height: 1.65;
 }
+.takeaway {
+  display: flex; gap: 12px; align-items: flex-start;
+  background: var(--lime-soft); border-left: 4px solid var(--lime);
+  border-radius: 0 var(--r-sm) var(--r-sm) 0; padding: 14px 18px;
+  margin-bottom: 40px; max-width: 820px;
+}
+.takeaway .ic { font-size: 1.1rem; flex-shrink: 0; }
+.takeaway p { font-size: .96rem; color: var(--forest-dark); font-weight: 500; line-height: 1.55; }
 h3 { font-size: 1.2rem; font-weight: 700; color: var(--forest-dark); margin-bottom: 10px; line-height: 1.3; }
 h4 { font-size: .97rem; font-weight: 600; color: var(--forest); margin-bottom: 6px; }
 
@@ -161,7 +165,6 @@ h4 { font-size: .97rem; font-weight: 600; color: var(--forest); margin-bottom: 6
 .card.top-green  { border-top: 3px solid var(--forest-mid); }
 .card.top-amber  { border-top: 3px solid var(--amber); }
 .card.top-teal   { border-top: 3px solid var(--teal); }
-.card.top-navy   { border-top: 3px solid var(--navy); }
 .card.top-coral  { border-top: 3px solid var(--coral); }
 .card-ic {
   width: 42px; height: 42px; border-radius: 11px;
@@ -169,7 +172,6 @@ h4 { font-size: .97rem; font-weight: 600; color: var(--forest); margin-bottom: 6
   background: rgba(26,80,56,.08); margin-bottom: 13px;
 }
 
-/* KPI number */
 .stat-num {
   font-size: 2.3rem; font-weight: 700; line-height: 1;
   color: var(--forest-dark); letter-spacing: -.02em;
@@ -178,45 +180,31 @@ h4 { font-size: .97rem; font-weight: 600; color: var(--forest); margin-bottom: 6
 .stat-lbl { font-size: .88rem; color: var(--ink-mid); margin-top: 8px; line-height: 1.5; }
 
 /* ── Hero ─────────────────────────────────────────── */
-#hero {
-  padding-top: clamp(136px,15.5vh,185px);
-  padding-bottom: clamp(68px,9vh,108px);
-}
-.hero-grid {
-  display: grid; grid-template-columns: 1.2fr .8fr;
-  gap: 52px; align-items: center;
-}
+#hero { padding-top: clamp(132px,15vh,180px); padding-bottom: clamp(64px,8vh,100px); }
+.hero-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 52px; align-items: center; }
 @media(max-width:900px) { .hero-grid { grid-template-columns: 1fr; gap: 28px; } }
 .hero-pre {
   display: inline-flex; align-items: center; gap: 9px;
   background: rgba(26,80,56,.07); border: 1px solid var(--border-med);
   padding: 6px 14px; border-radius: 999px;
-  font-size: .78rem; font-weight: 600; color: var(--forest);
-  margin-bottom: 22px;
+  font-size: .78rem; font-weight: 600; color: var(--forest); margin-bottom: 22px;
 }
 .hero-pre .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--lime); }
 h1 {
-  font-size: clamp(2.3rem,5.8vw,4.2rem);
-  font-weight: 700; line-height: 1.07;
-  letter-spacing: -.024em; color: var(--forest-dark); margin-bottom: 18px;
+  font-size: clamp(2.3rem,5.8vw,4.1rem);
+  font-weight: 700; line-height: 1.07; letter-spacing: -.024em;
+  color: var(--forest-dark); margin-bottom: 18px;
 }
-h1 .hl {
-  color: var(--forest-mid); position: relative;
-}
+h1 .hl { color: var(--forest-mid); position: relative; }
 h1 .hl::after {
-  content: ''; position: absolute; left: 0; right: 0;
-  bottom: .06em; height: .26em;
-  background: rgba(116,181,46,.28); z-index: -1; border-radius: 3px;
+  content: ''; position: absolute; left: 0; right: 0; bottom: .06em;
+  height: .26em; background: rgba(116,181,46,.28); z-index: -1; border-radius: 3px;
 }
-.hero-sub {
-  font-size: 1.05rem; color: var(--ink-mid);
-  max-width: 555px; margin-bottom: 28px; line-height: 1.65;
-}
+.hero-sub { font-size: 1.05rem; color: var(--ink-mid); max-width: 560px; margin-bottom: 28px; line-height: 1.65; }
 .btn {
   display: inline-flex; align-items: center; gap: 8px;
-  font-family: 'Sarabun', sans-serif; font-weight: 600;
-  font-size: .88rem; padding: 12px 22px;
-  border-radius: 9px; text-decoration: none; cursor: pointer;
+  font-family: 'Sarabun', sans-serif; font-weight: 600; font-size: .88rem;
+  padding: 12px 22px; border-radius: 9px; text-decoration: none; cursor: pointer;
   border: none; transition: .22s;
 }
 .btn.primary { background: var(--forest-dark); color: #fff; box-shadow: var(--shadow-sm); }
@@ -225,7 +213,6 @@ h1 .hl::after {
 .btn.ghost:hover { border-color: var(--forest-mid); color: var(--forest-mid); }
 .hero-cta { display: flex; gap: 10px; flex-wrap: wrap; }
 
-/* Hero KPI panel */
 .hero-panel {
   background: linear-gradient(148deg, var(--forest-dark) 0%, #0a2018 100%);
   border-radius: var(--r); padding: 30px; color: #dff0e7;
@@ -234,66 +221,88 @@ h1 .hl::after {
 .hero-panel::before {
   content: ''; position: absolute; width: 240px; height: 240px;
   border-radius: 50%; top: -90px; right: -70px;
-  background: radial-gradient(circle, rgba(116,181,46,.36), transparent 65%);
-  pointer-events: none;
+  background: radial-gradient(circle, rgba(116,181,46,.36), transparent 65%); pointer-events: none;
 }
 .hp-label {
   font-size: .7rem; font-weight: 700; letter-spacing: .16em;
   text-transform: uppercase; color: var(--lime); margin-bottom: 18px; position: relative;
 }
 .hp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-.hp-kpi .num {
-  font-size: 1.9rem; font-weight: 700; line-height: 1; color: #fff;
+.hp-kpi .num { font-size: 1.85rem; font-weight: 700; line-height: 1; color: #fff; }
+.hp-kpi .num small { font-size: .8rem; color: var(--lime); font-weight: 600; }
+.hp-kpi .lbl { font-size: .76rem; color: #a8ccb2; margin-top: 4px; line-height: 1.4; }
+
+/* ── Reframe split (the boss's insight) ─────────── */
+.reframe {
+  display: grid; grid-template-columns: 1fr 56px 1fr; align-items: stretch;
+  border-radius: var(--r); overflow: hidden; box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border); background: var(--card);
 }
-.hp-kpi .num small { font-size: .82rem; color: var(--lime); font-weight: 600; }
-.hp-kpi .lbl { font-size: .78rem; color: #a8ccb2; margin-top: 4px; line-height: 1.4; }
+@media(max-width:760px){ .reframe { grid-template-columns: 1fr; } }
+.rf-side { padding: 30px 28px; }
+.rf-side.old { background: var(--cream2); }
+.rf-side.new { background: linear-gradient(155deg, rgba(116,181,46,.1), rgba(26,80,56,.06)); }
+.rf-tag {
+  font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  margin-bottom: 12px; display: inline-block;
+}
+.rf-side.old .rf-tag { color: var(--muted); }
+.rf-side.new .rf-tag { color: var(--forest-mid); }
+.rf-headline { font-size: 1.45rem; font-weight: 800; line-height: 1.15; margin-bottom: 6px; }
+.rf-side.old .rf-headline { color: var(--sage); text-decoration: line-through; text-decoration-color: rgba(200,69,48,.5); text-decoration-thickness: 2px; }
+.rf-side.new .rf-headline { color: var(--forest-dark); }
+.rf-sub { font-size: .9rem; line-height: 1.55; }
+.rf-side.old .rf-sub { color: var(--muted); }
+.rf-side.new .rf-sub { color: var(--ink-mid); }
+.rf-arrow {
+  display: grid; place-items: center; background: var(--forest-dark); color: var(--lime);
+  font-size: 1.6rem; font-weight: 700;
+}
+@media(max-width:760px){ .rf-arrow { padding: 8px; } }
+
+/* ── Say / Don't say language table ─────────────── */
+.say-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
+@media(max-width:680px){ .say-grid { grid-template-columns: 1fr; } }
+.say-col { border-radius: var(--r); padding: 22px 24px; border: 1px solid var(--border); }
+.say-col.dont { background: var(--coral-soft); border-color: rgba(200,69,48,.22); }
+.say-col.do { background: var(--lime-soft); border-color: rgba(116,181,46,.3); }
+.say-col h4 { font-size: 1rem; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+.say-col.dont h4 { color: #8a2a14; }
+.say-col.do h4 { color: var(--forest-dark); }
+.say-line { font-size: .92rem; line-height: 1.5; padding: 9px 0; border-bottom: 1px dashed var(--border); }
+.say-line:last-child { border-bottom: none; }
+.say-col.dont .say-line { color: #6e3a2a; }
+.say-col.do .say-line { color: var(--forest); font-weight: 500; }
+
+/* ── Outcome cards ─────────────────────────────── */
+.outcome-n { font-size: .72rem; font-weight: 700; color: var(--lime); letter-spacing: .1em; }
 
 /* ── Chart cards ─────────────────────────────────── */
 .chart-card {
   background: var(--card); border: 1px solid var(--border);
   border-radius: var(--r); padding: 22px 20px 16px; box-shadow: var(--shadow-sm);
 }
-.chart-head {
-  display: flex; justify-content: space-between;
-  align-items: flex-start; gap: 10px; flex-wrap: wrap; margin-bottom: 4px;
-}
+.chart-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; flex-wrap: wrap; margin-bottom: 4px; }
 .chart-src { font-size: .74rem; color: var(--muted); margin-top: 3px; }
 .chart-wrap { position: relative; height: 285px; margin-top: 8px; }
 .chart-wrap.tall { height: 325px; }
-.chart-note {
-  font-size: .8rem; color: var(--muted); margin-top: 12px;
-  padding-top: 10px; border-top: 1px solid var(--border); line-height: 1.55;
-}
+.chart-note { font-size: .8rem; color: var(--muted); margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); line-height: 1.55; }
 
 /* ── Lead / tick / note ─────────────────────────── */
 .lead { color: var(--ink-mid); font-size: .96rem; line-height: 1.66; }
-.note {
-  font-size: .82rem; color: var(--muted); margin-top: 13px;
-  padding-top: 11px; border-top: 1px solid var(--border); line-height: 1.55;
-}
+.note { font-size: .82rem; color: var(--muted); margin-top: 13px; padding-top: 11px; border-top: 1px solid var(--border); line-height: 1.55; }
 ul.ticks { list-style: none; margin-top: 10px; }
-ul.ticks li {
-  padding-left: 20px; margin-bottom: 9px;
-  font-size: .93rem; color: var(--ink-mid);
-  line-height: 1.58; position: relative;
-}
-ul.ticks li::before {
-  content: ''; position: absolute; left: 0; top: .6em;
-  width: 7px; height: 7px; border-radius: 2px; background: var(--lime);
-}
+ul.ticks li { padding-left: 20px; margin-bottom: 9px; font-size: .93rem; color: var(--ink-mid); line-height: 1.58; position: relative; }
+ul.ticks li::before { content: ''; position: absolute; left: 0; top: .6em; width: 7px; height: 7px; border-radius: 2px; background: var(--lime); }
 
 /* ── Decomp timeline ─────────────────────────────── */
 .decomp { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
-.decomp .step {
-  flex: 1; min-width: 136px;
-  background: var(--cream); border: 1px solid var(--border);
-  border-radius: var(--r-sm); padding: 14px 16px;
-}
-.decomp .step .t { font-size: 1.45rem; font-weight: 700; color: var(--forest); margin-bottom: 3px; }
+.decomp .step { flex: 1; min-width: 132px; background: var(--cream); border: 1px solid var(--border); border-radius: var(--r-sm); padding: 14px 16px; }
+.decomp .step .t { font-size: 1.4rem; font-weight: 700; color: var(--forest); margin-bottom: 3px; }
 .decomp .step.bad .t { color: var(--coral); }
-.decomp .step .d { font-size: .84rem; color: var(--ink-mid); }
+.decomp .step .d { font-size: .83rem; color: var(--ink-mid); }
 
-/* ── Gauge bars (price premium) ─────────────────── */
+/* ── Gauge bars ─────────────────────────────────── */
 .gauge-row { margin-bottom: 14px; }
 .gauge-top { display: flex; justify-content: space-between; font-size: .88rem; margin-bottom: 5px; }
 .gauge-top b { font-size: .8rem; font-weight: 600; color: var(--muted); }
@@ -301,182 +310,113 @@ ul.ticks li::before {
 .fill { height: 100%; border-radius: 999px; width: 0; transition: width 1.3s cubic-bezier(.2,.8,.2,1); }
 
 /* ── Competitor table ───────────────────────────── */
-.cmp-scroll {
-  overflow-x: auto; border-radius: var(--r);
-  box-shadow: var(--shadow-sm); border: 1px solid var(--border);
-}
-.cmp-table { width: 100%; border-collapse: collapse; min-width: 800px; }
-.cmp-table th, .cmp-table td {
-  text-align: left; padding: 15px 18px;
-  vertical-align: top; border-bottom: 1px solid var(--border);
-  font-size: .88rem; line-height: 1.55;
-}
-.cmp-table thead th {
-  background: var(--forest-dark); color: rgba(220,240,228,.92);
-  font-weight: 700; font-size: .8rem; letter-spacing: .07em; text-transform: uppercase;
-}
+.cmp-scroll { overflow-x: auto; border-radius: var(--r); box-shadow: var(--shadow-sm); border: 1px solid var(--border); }
+.cmp-table { width: 100%; border-collapse: collapse; min-width: 860px; }
+.cmp-table th, .cmp-table td { text-align: left; padding: 15px 18px; vertical-align: top; border-bottom: 1px solid var(--border); font-size: .87rem; line-height: 1.55; }
+.cmp-table thead th { background: var(--forest-dark); color: rgba(220,240,228,.92); font-weight: 700; font-size: .8rem; letter-spacing: .07em; text-transform: uppercase; }
 .cmp-table thead th.gap-col { background: #091c10; color: var(--lime); }
 .cmp-table tbody tr:hover td { background: rgba(26,80,56,.03); }
 .cmp-table td { background: var(--card); }
-.cmp-table td b { color: var(--forest-dark); font-weight: 700; font-size: .95rem; }
-.cmp-table .p-type { display: block; font-size: .77rem; color: var(--muted); margin-top: 3px; }
+.cmp-table td b { color: var(--forest-dark); font-weight: 700; font-size: .94rem; }
+.cmp-table .p-type { display: block; font-size: .76rem; color: var(--muted); margin-top: 3px; }
 .cmp-table td:last-child { background: rgba(116,181,46,.07); color: var(--forest); font-weight: 500; }
 .cmp-table tr.us td { background: rgba(26,80,56,.07); font-weight: 600; border-bottom: none; }
 .cmp-table tr.us td:first-child b { color: var(--forest-mid); }
 .cmp-table tr.us td:last-child { background: rgba(26,80,56,.14); color: var(--forest-dark); }
 
-/* ── Customer target mini-table ─────────────────── */
+/* ── Customer table ─────────────────────────────── */
 .cust-table { width: 100%; border-collapse: collapse; margin-top: 12px; }
-.cust-table th {
-  text-align: left; padding: 9px 14px; font-size: .75rem;
-  font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
-  background: var(--forest-dark); color: rgba(220,240,228,.88);
-}
-.cust-table td {
-  padding: 10px 14px; font-size: .88rem; color: var(--ink-mid);
-  border-bottom: 1px solid var(--border); vertical-align: middle;
-}
+.cust-table th { text-align: left; padding: 9px 14px; font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; background: var(--forest-dark); color: rgba(220,240,228,.88); }
+.cust-table td { padding: 10px 14px; font-size: .88rem; color: var(--ink-mid); border-bottom: 1px solid var(--border); vertical-align: middle; }
 .cust-table td.target { text-align: right; font-weight: 700; color: var(--forest); }
 .cust-table tr:last-child td { border-bottom: none; }
 .cust-table tr:hover td { background: rgba(26,80,56,.04); }
 
+/* ── Procurement Q list ─────────────────────────── */
+.pq { list-style: none; counter-reset: pq; margin-top: 8px; }
+.pq li { counter-increment: pq; position: relative; padding: 11px 0 11px 42px; border-bottom: 1px solid var(--border); font-size: .93rem; color: var(--ink-mid); line-height: 1.5; }
+.pq li::before { content: counter(pq); position: absolute; left: 0; top: 9px; width: 26px; height: 26px; border-radius: 7px; background: var(--forest-dark); color: #fff; font-size: .82rem; font-weight: 700; display: grid; place-items: center; }
+.pq li:last-child { border-bottom: none; }
+.pq li.no::before { content: '✕'; background: var(--coral); }
+.pq li b { color: var(--forest-dark); }
+
 /* ── Tier cards ─────────────────────────────────── */
-.tier {
-  display: flex; gap: 18px; align-items: flex-start;
-  background: var(--card); border: 1px solid var(--border);
-  border-radius: var(--r); padding: 20px 24px;
-  box-shadow: var(--shadow-sm); margin-bottom: 13px;
-}
-.tier-num {
-  flex-shrink: 0; width: 48px; height: 48px;
-  border-radius: 12px; display: grid; place-items: center;
-  font-weight: 700; font-size: 1.25rem; color: #fff;
-}
+.tier { display: flex; gap: 18px; align-items: flex-start; background: var(--card); border: 1px solid var(--border); border-radius: var(--r); padding: 20px 24px; box-shadow: var(--shadow-sm); margin-bottom: 13px; }
+.tier-num { flex-shrink: 0; width: 48px; height: 48px; border-radius: 12px; display: grid; place-items: center; font-weight: 700; font-size: 1.25rem; color: #fff; }
 .t1 .tier-num { background: linear-gradient(148deg, var(--forest-mid), var(--forest-dark)); }
 .t2 .tier-num { background: linear-gradient(148deg, var(--teal), #115856); }
 .t3 .tier-num { background: linear-gradient(148deg, var(--amber), #8f5010); }
 .tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
-.tag {
-  font-size: .82rem; background: rgba(26,80,56,.06);
-  border: 1px solid var(--border); padding: 5px 11px;
-  border-radius: 6px; color: var(--forest-dark); font-weight: 500;
-}
+.tag { font-size: .82rem; background: rgba(26,80,56,.06); border: 1px solid var(--border); padding: 5px 11px; border-radius: 6px; color: var(--forest-dark); font-weight: 500; }
 .tag.hot { background: var(--amber-soft); border-color: rgba(200,112,32,.28); color: #8a5210; }
 
 /* ── Regional rollout ───────────────────────────── */
 .rollout { display: flex; flex-wrap: wrap; counter-reset: r; }
 .region { flex: 1; min-width: 152px; padding: 18px 15px; position: relative; }
-.region::before {
-  counter-increment: r; content: counter(r);
-  position: absolute; top: 0; left: 15px;
-  font-size: 2.1rem; font-weight: 800;
-  color: rgba(116,181,46,.18); line-height: 1;
-}
-.region:not(:last-child)::after {
-  content: '→'; position: absolute; right: -5px; top: 50%;
-  color: var(--lime); font-size: 1rem; font-weight: 700;
-}
+.region::before { counter-increment: r; content: counter(r); position: absolute; top: 0; left: 15px; font-size: 2.1rem; font-weight: 800; color: rgba(116,181,46,.18); line-height: 1; }
+.region:not(:last-child)::after { content: '→'; position: absolute; right: -5px; top: 50%; color: var(--lime); font-size: 1rem; font-weight: 700; }
 .region h4 { margin: 20px 0 3px; }
 .region p { font-size: .8rem; color: var(--muted); line-height: 1.5; }
 
 /* ── Sales waves ────────────────────────────────── */
-.wave {
-  display: flex; gap: 18px; align-items: flex-start;
-  background: var(--card); border: 1px solid var(--border);
-  border-left: 4px solid var(--forest); border-radius: var(--r);
-  padding: 18px 22px; box-shadow: var(--shadow-sm); margin-bottom: 12px;
-}
+.wave { display: flex; gap: 18px; align-items: flex-start; background: var(--card); border: 1px solid var(--border); border-left: 4px solid var(--forest); border-radius: var(--r); padding: 18px 22px; box-shadow: var(--shadow-sm); margin-bottom: 12px; }
 .wave .w-no { font-size: 1.9rem; font-weight: 700; color: var(--lime); min-width: 48px; line-height: 1; }
-.wave.w2 { border-left-color: var(--teal); }   .wave.w2 .w-no { color: var(--teal); }
-.wave.w3 { border-left-color: var(--amber); }  .wave.w3 .w-no { color: var(--amber); }
+.wave.w2 { border-left-color: var(--teal); }  .wave.w2 .w-no { color: var(--teal); }
+.wave.w3 { border-left-color: var(--amber); } .wave.w3 .w-no { color: var(--amber); }
 
-/* ── EPR Timeline ───────────────────────────────── */
+/* ── Timeline ───────────────────────────────────── */
 .timeline { position: relative; padding-left: 26px; margin-top: 8px; }
-.timeline::before {
-  content: ''; position: absolute; left: 6px; top: 5px; bottom: 5px;
-  width: 2px; background: linear-gradient(var(--forest-mid), var(--teal), var(--amber));
-}
+.timeline::before { content: ''; position: absolute; left: 6px; top: 5px; bottom: 5px; width: 2px; background: linear-gradient(var(--forest-mid), var(--teal), var(--amber)); }
 .tl-ev { position: relative; margin-bottom: 16px; }
-.tl-ev::before {
-  content: ''; position: absolute; left: -26px; top: 5px;
-  width: 15px; height: 15px; border-radius: 50%;
-  background: var(--card); border: 3px solid var(--forest);
-}
+.tl-ev::before { content: ''; position: absolute; left: -26px; top: 5px; width: 15px; height: 15px; border-radius: 50%; background: var(--card); border: 3px solid var(--forest); }
+.tl-ev.hot::before { border-color: var(--coral); }
 .tl-ev .yr { font-weight: 700; font-size: .95rem; color: var(--forest-dark); margin-bottom: 2px; }
 
-/* ── Cert status table ──────────────────────────── */
-.cert-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-.cert-table td { padding: 9px 12px; font-size: .86rem; border-bottom: 1px solid var(--border); color: var(--ink-mid); vertical-align: middle; }
-.cert-table td:first-child { font-weight: 600; color: var(--forest-dark); width: 38%; }
-.cert-table tr:last-child td { border-bottom: none; }
+/* ── Cert / material table ──────────────────────── */
+.kv-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+.kv-table td { padding: 9px 12px; font-size: .86rem; border-bottom: 1px solid var(--border); color: var(--ink-mid); vertical-align: middle; }
+.kv-table td:first-child { font-weight: 600; color: var(--forest-dark); width: 40%; }
+.kv-table tr:last-child td { border-bottom: none; }
+.mat-table { width: 100%; border-collapse: collapse; min-width: 480px; }
+.mat-table th, .mat-table td { padding: 11px 14px; font-size: .86rem; text-align: left; border-bottom: 1px solid var(--border); }
+.mat-table th { background: var(--forest-dark); color: rgba(220,240,228,.9); font-weight: 700; font-size: .78rem; letter-spacing: .05em; }
+.mat-table td:first-child { font-weight: 600; color: var(--forest-dark); }
+.mat-table .win { color: var(--forest-mid); font-weight: 700; }
 
-/* ── Strategic moves ────────────────────────────── */
-.moves { counter-reset: m; margin-top: 18px; }
-.move {
-  display: flex; gap: 18px; align-items: flex-start;
-  padding: 20px 0; border-bottom: 1px solid var(--border);
-}
-.move::before {
-  counter-increment: m; content: "0" counter(m);
-  font-size: 2.1rem; font-weight: 700;
-  color: var(--lime); line-height: 1; min-width: 56px; flex-shrink: 0;
-}
-.move:last-child { border-bottom: none; }
-
-/* ── Divider / quote ────────────────────────────── */
-.sec-gap {
-  padding: 40px clamp(18px,5vw,48px);
-  max-width: 1280px; margin: 0 auto;
-}
-.insight-quote {
-  background: var(--forest-dark); border-radius: var(--r);
-  padding: 36px 40px; position: relative; overflow: hidden;
-}
-.insight-quote::before {
-  content: ''; position: absolute; right: -50px; top: -50px;
-  width: 200px; height: 200px; border-radius: 50%;
-  background: rgba(116,181,46,.12);
-}
-.insight-quote p {
-  font-size: clamp(1.1rem,2.2vw,1.6rem);
-  font-weight: 600; color: rgba(220,240,228,.92);
-  line-height: 1.5; position: relative;
-}
-.insight-quote p .em { color: var(--lime); }
-
-/* ── Warning callout ────────────────────────────── */
-.warn-box {
-  background: rgba(197,121,32,.07); border: 1px solid rgba(197,121,32,.28);
-  border-left: 4px solid var(--amber); border-radius: var(--r-sm);
-  padding: 14px 18px; margin-top: 14px;
-}
-.warn-box p { font-size: .86rem; color: #6e4a10; line-height: 1.56; }
+/* ── Warning box ────────────────────────────────── */
+.warn-box { background: var(--amber-soft); border: 1px solid rgba(197,121,32,.28); border-left: 4px solid var(--amber); border-radius: var(--r-sm); padding: 14px 18px; margin-top: 14px; }
+.warn-box.red { background: var(--coral-soft); border-color: rgba(200,69,48,.3); border-left-color: var(--coral); }
+.warn-box p { font-size: .85rem; color: #6e4a10; line-height: 1.56; }
+.warn-box.red p { color: #7a2a18; }
+.warn-box h4 { margin-bottom: 5px; }
+.warn-box.red h4 { color: #8a2a14; }
 
 /* ── Dark callout ───────────────────────────────── */
-.dark-card {
-  background: linear-gradient(148deg, var(--forest-dark) 0%, #0a2018 100%);
-  color: rgba(220,240,228,.9); border-radius: var(--r); padding: 28px;
-  border: none; box-shadow: var(--shadow);
-}
+.dark-card { background: linear-gradient(148deg, var(--forest-dark) 0%, #0a2018 100%); color: rgba(220,240,228,.9); border-radius: var(--r); padding: 28px; border: none; box-shadow: var(--shadow); }
 .dark-card h3 { color: #fff; margin-bottom: 10px; }
 .dark-card .hl { color: var(--lime); font-weight: 600; }
 
+/* ── Strategic moves ────────────────────────────── */
+.moves { counter-reset: m; margin-top: 18px; }
+.move { display: flex; gap: 18px; align-items: flex-start; padding: 20px 0; border-bottom: 1px solid var(--border); }
+.move::before { counter-increment: m; content: "0" counter(m); font-size: 2.1rem; font-weight: 700; color: var(--lime); line-height: 1; min-width: 56px; flex-shrink: 0; }
+.move:last-child { border-bottom: none; }
+
+/* ── Insight quote ──────────────────────────────── */
+.sec-gap { padding: 40px clamp(18px,5vw,48px); max-width: 1280px; margin: 0 auto; }
+.insight-quote { background: var(--forest-dark); border-radius: var(--r); padding: 36px 40px; position: relative; overflow: hidden; }
+.insight-quote::before { content: ''; position: absolute; right: -50px; top: -50px; width: 200px; height: 200px; border-radius: 50%; background: rgba(116,181,46,.12); }
+.insight-quote p { font-size: clamp(1.1rem,2.2vw,1.55rem); font-weight: 600; color: rgba(220,240,228,.92); line-height: 1.5; position: relative; }
+.insight-quote .em { color: var(--lime); }
+.insight-quote .src { font-size: .8rem; color: rgba(168,204,178,.7); margin-top: 12px; font-weight: 400; }
+
 /* ── Footer ─────────────────────────────────────── */
-footer {
-  background: var(--forest-dark); color: rgba(200,225,210,.8);
-  padding: 56px clamp(18px,5vw,48px) 38px; margin-top: 40px;
-}
+footer { background: var(--forest-dark); color: rgba(200,225,210,.8); padding: 56px clamp(18px,5vw,48px) 38px; margin-top: 40px; }
 .foot-wrap { max-width: 1280px; margin: 0 auto; }
 .foot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin: 26px 0 28px; }
 @media(max-width:680px) { .foot-grid { grid-template-columns: 1fr; } }
-.foot-col h5 {
-  font-size: .72rem; font-weight: 700; letter-spacing: .14em;
-  text-transform: uppercase; color: rgba(180,212,190,.6);
-  margin-bottom: 10px;
-}
-.foot-col p, .foot-col li {
-  font-size: .8rem; line-height: 1.72; color: rgba(200,225,210,.65);
-}
+.foot-col h5 { font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: rgba(180,212,190,.6); margin-bottom: 10px; }
+.foot-col p, .foot-col li { font-size: .8rem; line-height: 1.72; color: rgba(200,225,210,.65); }
 .foot-col ul { list-style: none; }
 .foot-col ul li { padding-left: 14px; position: relative; }
 .foot-col ul li::before { content: '·'; position: absolute; left: 0; color: var(--lime); }
@@ -484,19 +424,11 @@ footer a { color: var(--lime); text-decoration: none; }
 .foot-legend { display: flex; gap: 18px; flex-wrap: wrap; margin-bottom: 22px; }
 .leg-item { display: flex; align-items: center; gap: 6px; font-size: .78rem; color: rgba(200,225,210,.65); }
 .leg-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-.foot-disclaimer {
-  background: rgba(0,0,0,.18); border-radius: var(--r-sm);
-  padding: 14px 18px; margin-top: 18px;
-}
+.foot-disclaimer { background: rgba(0,0,0,.18); border-radius: var(--r-sm); padding: 14px 18px; margin-top: 18px; }
 .foot-disclaimer p { font-size: .77rem; color: rgba(170,200,180,.6); line-height: 1.65; }
-.foot-meta {
-  margin-top: 26px; padding-top: 18px;
-  border-top: 1px solid rgba(255,255,255,.1);
-  display: flex; justify-content: space-between; flex-wrap: wrap;
-  gap: 8px; font-size: .74rem; color: rgba(170,200,180,.5);
-}
+.foot-meta { margin-top: 26px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.1); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: .74rem; color: rgba(170,200,180,.5); }
 
-/* ── Reveal animation ───────────────────────────── */
+/* ── Reveal ─────────────────────────────────────── */
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity .75s cubic-bezier(.2,.7,.2,1), transform .75s cubic-bezier(.2,.7,.2,1); }
 .reveal.visible { opacity: 1; transform: none; }
 .d1 { transition-delay: .08s; } .d2 { transition-delay: .16s; } .d3 { transition-delay: .24s; }
@@ -506,92 +438,148 @@ footer a { color: var(--lime); text-decoration: none; }
 <body>
 <div id="progress"></div>
 
-<!-- NAV -->
 <nav id="nav">
-  <a class="nav-brand" href="#hero"><span class="dot"></span> CPPC · PBAT Intelligence</a>
+  <a class="nav-brand" href="#hero"><span class="dot"></span> CPPC · Biodegradable Intelligence</a>
   <nav class="nav-links">
+    <a href="#reframe">ลูกค้าซื้ออะไร</a>
     <a href="#product">ผลิตภัณฑ์</a>
     <a href="#market">ตลาด</a>
     <a href="#competition">คู่แข่ง</a>
     <a href="#customers">ลูกค้า</a>
     <a href="#pricing">ราคา</a>
     <a href="#esg">กฎหมาย/ESG</a>
-    <a href="#playbook">กลยุทธ์ขาย</a>
-    <a href="#summary">สรุป</a>
+    <a href="#playbook">กลยุทธ์</a>
   </nav>
-  <span class="nav-date">มิถุนายน 2569 · ฉบับใช้งานภายใน</span>
+  <span class="nav-date">มิ.ย. 2569 · ฉบับ Reframe</span>
 </nav>
 
 <!-- ═══════════════ HERO ═══════════════ -->
 <div class="wrap" id="hero">
   <div class="hero-grid">
     <div>
-      <div class="hero-pre reveal"><span class="dot"></span> รายงานข่าวกรองเชิงกลยุทธ์ · มิถุนายน 2569</div>
-      <h1 class="reveal d1">ถุงหูหิ้ว &amp; ถุงกระตุก<br><span class="hl">PBAT ย่อยสลายได้</span></h1>
-      <p class="hero-sub reveal d2">รายงานนี้ครอบคลุมทุกมิติตลาด — มูลค่า การเติบโต ภูมิทัศน์การแข่งขัน กลุ่มลูกค้าเป้าหมาย โครงสร้างราคา และแนวทางการขายแบบ <b>Field Sales ทุกภูมิภาค</b> เพื่อสนับสนุนทีมขายภาคสนาม CPPC</p>
+      <div class="hero-pre reveal"><span class="dot"></span> รายงานข่าวกรองเชิงกลยุทธ์ · ฉบับ Reframe · มิถุนายน 2569</div>
+      <h1 class="reveal d1">ถุง<span class="hl">ย่อยสลายได้</span><br>ที่ลูกค้าซื้อจริง</h1>
+      <p class="hero-sub reveal d2">ลูกค้าไม่ได้ซื้อ "PBAT" หรือสูตรวัตถุดิบ — ลูกค้าซื้อ <b>ผลลัพธ์</b>: ย่อยสลายได้จริง มีใบรับรอง และตอบ ESG ได้ รายงานนี้จัดมุมตลาด คู่แข่ง ราคา และวิธีขายใหม่ ผ่านสิ่งที่ลูกค้าตัดสินใจซื้อจริง</p>
       <div class="hero-cta reveal d3">
-        <a href="#market" class="btn primary">ดูข้อมูลตลาด ↓</a>
-        <a href="#playbook" class="btn ghost">แนวทางการขาย</a>
+        <a href="#reframe" class="btn primary">เริ่มที่ Insight หลัก ↓</a>
+        <a href="#playbook" class="btn ghost">ไปที่กลยุทธ์การขาย</a>
       </div>
     </div>
     <div class="hero-panel reveal d2">
-      <div class="hp-label">CPPC — ข้อมูลภาพรวมโครงการ</div>
+      <div class="hp-label">ทำไมตลาดนี้ "ใช่" ตอนนี้</div>
       <div class="hp-grid">
         <div class="hp-kpi">
+          <div class="num"><span class="count" data-target="80">80</span><small>%</small></div>
+          <div class="lbl">ผู้บริโภคยอมจ่ายเพิ่ม 3–5% เพื่อ compostable</div>
+        </div>
+        <div class="hp-kpi">
+          <div class="num"><span class="count" data-target="100000">100,000</span><small> ฿</small></div>
+          <div class="lbl">โทษปรับถุงต้องห้าม (กฎ ม.ค. 2568)</div>
+        </div>
+        <div class="hp-kpi">
+          <div class="num"><span class="count" data-target="1.5" data-prefix="1.2–">1.5</span><small> ฿/แพ็ค</small></div>
+          <div class="lbl">ค่าธรรมเนียม EPR ที่จะเพิ่มต้นทุนถุงทั่วไป (2570)</div>
+        </div>
+        <div class="hp-kpi">
           <div class="num"><span class="count" data-target="2000">2,000</span><small> ตัน/ด.</small></div>
-          <div class="lbl">เป้ากำลังผลิตรวม (2569–2571)</div>
-        </div>
-        <div class="hp-kpi">
-          <div class="num"><span class="count" data-target="100">100</span><small>%</small></div>
-          <div class="lbl">ทีมขายครอบคลุมทุกภูมิภาค</div>
-        </div>
-        <div class="hp-kpi">
-          <div class="num"><span class="count" data-target="12">12</span><small> เดือน</small></div>
-          <div class="lbl">ระยะย่อยสลาย (Home Compost)</div>
-        </div>
-        <div class="hp-kpi">
-          <div class="num">−<span class="count" data-target="50">50</span><small>%</small></div>
-          <div class="lbl">คาร์บอนต่ำกว่า PE (ค่าสูงสุด LCA)</div>
+          <div class="lbl">เป้ากำลังผลิต CPPC (โรงงานสีคิ้ว)</div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
+<!-- ═══════════════ REFRAME — THE INSIGHT ═══════════════ -->
+<section class="section" id="reframe">
+  <div class="sec-label reveal">00 · Strategic Insight</div>
+  <h2 class="reveal">ลูกค้าซื้อ "ผลลัพธ์" ไม่ใช่ "วัตถุดิบ"</h2>
+  <p class="sec-intro reveal">ฝ่ายจัดซื้อไม่ได้ถามว่าถุงทำจาก PBAT หรือ PBS ผสมกี่เปอร์เซ็นต์ — เหมือนที่ลูกค้าซื้อน้ำมันพืชโดยไม่ถามวิธีสกัด สิ่งที่เขาตัดสินใจซื้อคือผลลัพธ์ที่ตรวจสอบได้ การวางสินค้าด้วยคำว่า "PBAT" จึงทำให้ตลาดมองไม่เห็นคุณค่าที่แท้จริง</p>
+
+  <div class="reframe reveal">
+    <div class="rf-side old">
+      <span class="rf-tag">สิ่งที่เราเคยสื่อสาร</span>
+      <div class="rf-headline">"ถุง PBAT"</div>
+      <p class="rf-sub">โฟกัสที่วัตถุดิบ — ลูกค้าส่วนใหญ่ไม่รู้จัก PBAT, ค้นหาน้อย, scope แคบ และไม่เชื่อมโยงกับ ESG ที่ฝ่ายจัดซื้อต้องตอบ</p>
+    </div>
+    <div class="rf-arrow">→</div>
+    <div class="rf-side new">
+      <span class="rf-tag">สิ่งที่ลูกค้าซื้อจริง</span>
+      <div class="rf-headline">"ถุงย่อยสลายได้ มีใบรับรอง"</div>
+      <p class="rf-sub">โฟกัสที่ผลลัพธ์ — ตลาดกว้างกว่า, ค้นหามากกว่า, ตอบ ESG KPI ได้ตรง และเปลี่ยนวัตถุดิบ (PBAT/PBS) ให้เป็นเพียง "วิธีการ" ที่อยู่เบื้องหลัง</p>
+    </div>
+  </div>
+
+  <h3 class="reveal" style="margin-top:40px">ภาษาที่ทีมขายต้องปรับ</h3>
+  <p class="lead reveal" style="margin-bottom:18px;max-width:760px">เปลี่ยนจากการพูดถึงวัตถุดิบ → พูดถึงผลลัพธ์ที่ฝ่ายจัดซื้อและฝ่าย Sustainability นำไปใช้ต่อได้</p>
+  <div class="say-grid reveal d1">
+    <div class="say-col dont">
+      <h4>✕ หลีกเลี่ยง (เน้นวัตถุดิบ)</h4>
+      <div class="say-line">"ถุงของเราทำจาก PBAT"</div>
+      <div class="say-line">"วัสดุ PBAT คือ BDO + AA + PTA"</div>
+      <div class="say-line">"ผสม PBAT กับ PBS สัดส่วน X%"</div>
+      <div class="say-line">"ราคาเรซิน ~50 บาท/กก."</div>
+    </div>
+    <div class="say-col do">
+      <h4>✓ ใช้แทน (เน้นผลลัพธ์)</h4>
+      <div class="say-line">"ย่อยสลายได้จริง มีใบรับรองมาตรฐานสากล"</div>
+      <div class="say-line">"ผ่านมาตรฐาน EN 13432 / มอก. 17088"</div>
+      <div class="say-line">"Home Compost 12 เดือน · Industrial 6 เดือน"</div>
+      <div class="say-line">"พร้อมเอกสาร Carbon/Scope 3 ให้ฝ่าย ESG ของท่าน"</div>
+    </div>
+  </div>
+
+  <div class="takeaway reveal d1" style="margin-top:24px;margin-bottom:0">
+    <span class="ic">🎯</span>
+    <p>วัตถุดิบเป็น "หน้าที่ของผู้ผลิต" — ทีมขายต้องรู้ไว้ตอบเมื่อถูกถาม แต่ไม่ใช่หัวข้อเปิดการขาย เปิดด้วยผลลัพธ์ที่ลูกค้าเอาไปใช้ได้เสมอ</p>
+  </div>
+</section>
+
 <!-- ═══════════════ 01 · PRODUCT ═══════════════ -->
 <section class="section" id="product">
   <div class="sec-label reveal">01 · ผลิตภัณฑ์</div>
-  <h2 class="reveal">PBAT คืออะไร และเหนือกว่าพลาสติกทั่วไปอย่างไร</h2>
-  <p class="sec-intro reveal">พลาสติกย่อยสลายได้ทางชีวภาพที่ผ่านมาตรฐาน Compostable จริง ใช้ทดแทน PE/LDPE ได้ — ยืดหยุ่น ทนทาน สลายเป็นดินและน้ำโดยไม่เหลือสารไมโครพลาสติก</p>
+  <h2 class="reveal">3 ผลลัพธ์ที่ลูกค้าซื้อ — และเทคโนโลยีเบื้องหลัง</h2>
+  <p class="sec-intro reveal">นำเสนอด้วยผลลัพธ์ก่อนเสมอ ส่วนวัตถุดิบ (PBAT + PBS) คือสิ่งที่ทำให้ผลลัพธ์เหล่านี้เกิดขึ้นได้ในต้นทุนที่แข่งขันได้</p>
+
   <div class="grid g3">
     <div class="card top-green reveal">
-      <div class="card-ic">🧬</div>
-      <h3>วัสดุ PBAT</h3>
-      <p class="lead">Polybutylene Adipate Terephthalate (BDO + AA + PTA) — ต้นทุนเม็ดพลาสติกลดลงมากจากกระบวนการผลิตถ่านหินของจีน ทำให้ราคาสามารถแข่งขันกับ PE/PP ได้</p>
+      <div class="card-ic">🌱</div>
+      <span class="outcome-n">ผลลัพธ์ 01</span>
+      <h3>ย่อยสลายได้จริง + มีใบรับรอง</h3>
+      <p class="lead">Home Compost ~12 เดือน · Industrial Compost ~6 เดือน สลายเป็นดิน+น้ำ ตามมาตรฐาน EN 13432 / ISO 17088 — ใบรับรองคือสิ่งที่ฝ่ายจัดซื้อใช้ตัดสินใจ</p>
     </div>
     <div class="card top-green reveal d1">
-      <div class="card-ic">♻️</div>
-      <h3>ย่อยสลายได้จริง</h3>
-      <p class="lead">Home Compost ~12 เดือน · Industrial Compost ~6 เดือน กลายเป็นดิน+น้ำ <b>ไม่เหลือสารไมโครพลาสติก</b> ตามมาตรฐาน EN 13432 / ISO 17088</p>
+      <div class="card-ic">🛡️</div>
+      <span class="outcome-n">ผลลัพธ์ 02</span>
+      <h3>ไม่ทิ้งไมโครพลาสติกตกค้าง<br>(เมื่อ Compost ตามเงื่อนไข)</h3>
+      <p class="lead">ภายใต้สภาวะการ Compost ที่กำหนด ผลิตภัณฑ์รับรองจะย่อยสลายสมบูรณ์เป็น CO₂ น้ำ และชีวมวล โดยไม่ทิ้งไมโครพลาสติก</p>
+      <div class="warn-box red" style="margin-top:12px">
+        <p><b>สำคัญ:</b> เคลม "ไม่มีไมโครพลาสติก" ต้องผูกกับ "เงื่อนไขการ Compost + ใบรับรอง" เสมอ — ดูส่วนกฎหมาย/ESG</p>
+      </div>
     </div>
     <div class="card top-green reveal d2">
-      <div class="card-ic">🛡️</div>
-      <h3>ผ่านการทดสอบเชิงกล</h3>
-      <p class="lead">Drop Test · Jog Test (ทนแรงดึง 1,000 ครั้ง) · Static Load — ความแข็งแรงเพียงพอต่อการใช้งานจริงในระดับการค้าปลีกและ HORECA</p>
-      <div class="warn-box" style="margin-top:12px">
-        <p>หมายเหตุ: การทดสอบเชิงกลแตกต่างจากการรับรองมาตรฐาน Compostable — ดูสถานะใบรับรองในส่วน ESG</p>
-      </div>
+      <div class="card-ic">📉</div>
+      <span class="outcome-n">ผลลัพธ์ 03</span>
+      <h3>Carbon ต่ำกว่า PE</h3>
+      <p class="lead">Carbon Footprint ต่ำกว่าถุง PE ~20–50% (LCA) — ลูกค้าค้าปลีก/QSR นำไปรายงาน ESG และ Scope 3 Emission ได้จริง</p>
     </div>
   </div>
 
   <div class="grid g2 reveal" style="margin-top:18px">
-    <div class="chart-card">
-      <div class="chart-head">
-        <div><h3>เปรียบเทียบสเปคกับถุง PE</h3><div class="chart-src">ที่สเปคเทียบเท่ากัน | ข้อมูลบริษัท</div></div>
-        <span class="badge ok">Confirmed</span>
+    <div class="card">
+      <h3 style="margin-bottom:6px">เบื้องหลัง: PBAT + PBS</h3>
+      <p class="lead" style="margin-bottom:8px">ทีมขายรู้ไว้ตอบเมื่อถูกถาม — ไม่ใช่หัวข้อเปิดการขาย การผสม PBAT (ยืดหยุ่น) + PBS (แข็งแรง ทนร้อน ต้นทุนต่ำ) ให้ถุงที่ใช้งานได้จริงในต้นทุนแข่งขันได้</p>
+      <div style="overflow-x:auto">
+        <table class="mat-table">
+          <thead><tr><th>คุณสมบัติ</th><th>PBAT</th><th>PBS</th></tr></thead>
+          <tbody>
+            <tr><td>ความยืดหยุ่น (ฟิล์มบาง)</td><td class="win">ดีมาก</td><td>ปานกลาง</td></tr>
+            <tr><td>ความแข็งแรง / ทนร้อน</td><td>~60°C</td><td class="win">&gt;100°C</td></tr>
+            <tr><td>ต้นทุนวัตถุดิบ</td><td>ปานกลาง</td><td class="win">ต่ำกว่า</td></tr>
+            <tr><td>ผลิตในไทย</td><td>เรซินกลุ่ม CP</td><td class="win">PTT MCC BioPBS 20,000 ต./ปี</td></tr>
+          </tbody>
+        </table>
       </div>
-      <div class="chart-wrap"><canvas id="specChart"></canvas></div>
-      <p class="chart-note">น้ำหนัก PBAT มากกว่า PE ประมาณ 20–30% เนื่องจากความหนาแน่นของวัสดุ — ตัวขับหลักของต้นทุนต่อใบ กลยุทธ์การปรับความหนา (Gauge Optimisation) เป็นเครื่องมือลดส่วนต่างราคา</p>
+      <p class="note">CPPC มีแหล่งทั้ง PBAT (กลุ่ม CP) และ PBS (PTT MCC ในไทย) = ความยืดหยุ่นด้านต้นทุนที่คู่แข่งนำเข้าไม่มี <span class="badge ok">Confirmed</span></p>
     </div>
     <div class="card">
       <h3 style="margin-bottom:14px">ระยะเวลาย่อยสลายตามสภาวะ</h3>
@@ -601,9 +589,9 @@ footer a { color: var(--lime); text-decoration: none; }
         <div class="step bad"><div class="t">100 ปี</div><div class="d">ถุง PE ทั่วไปในสิ่งแวดล้อม</div></div>
       </div>
       <ul class="ticks" style="margin-top:16px">
-        <li><b>ผลิตภัณฑ์หลัก 2 ชนิด:</b> ถุงหูหิ้ว (T-Shirt Bag) → CP ALL · ถุงม้วนกระตุก (Roll Bag) → CP AXTRA</li>
+        <li><b>ผลิตภัณฑ์หลัก 2 ชนิด:</b> ถุงหูหิ้ว (T-Shirt) → CP ALL · ถุงม้วนกระตุก (Roll) → CP AXTRA</li>
         <li><b>ผลิตภัณฑ์ต่อยอด:</b> ถุงขยะ · ถุงพัสดุ · ถุงระบายอากาศ (ผัก/กล้วย)</li>
-        <li><b>โรงงานใหม่:</b> สีคิ้ว นครราชสีมา (อาคาร 70×165 ม.) · เริ่มผลิตกระตุก 23 ก.ค. 2569 · หูหิ้ว 15 ส.ค. 2569</li>
+        <li><b>โรงงานใหม่:</b> สีคิ้ว นครราชสีมา · กระตุก 23 ก.ค. 69 · หูหิ้ว 15 ส.ค. 69</li>
       </ul>
     </div>
   </div>
@@ -612,35 +600,41 @@ footer a { color: var(--lime); text-decoration: none; }
 <!-- ═══════════════ 02 · MARKET ═══════════════ -->
 <section class="section" id="market">
   <div class="sec-label reveal">02 · ตลาด &amp; การเติบโต</div>
-  <h2 class="reveal">ตลาดยังมีขนาดเล็ก แต่เติบโตในอัตราสูง</h2>
-  <p class="sec-intro reveal">ตลาดถุง Compostable ในประเทศไทยยังเป็นสัดส่วนน้อยของตลาดถุงรวม แต่มีอัตราการเติบโตสูงบนแรงขับจากนโยบาย EPR กระแส ESG และต้นทุนเรซินที่ลดลงต่อเนื่อง</p>
+  <h2 class="reveal">ถุงทั่วไป "หด" — ถุงย่อยสลายได้ "โต"</h2>
+  <p class="sec-intro reveal">เมื่อมองผ่านคำว่า "Biodegradable" แทน "PBAT" ตลาดจะกว้างขึ้นมาก และเห็นภาพชัดว่านี่คือ growth pocket ในตลาดถุงที่ภาพรวมกำลังหดตัว</p>
+
+  <div class="takeaway reveal">
+    <span class="ic">📊</span>
+    <p><b>Executive takeaway:</b> ตลาดถุงพลาสติกทั่วไปไทยหดตัว (ยอดขายในประเทศ −2.7% YoY, จุดต่ำสุด Q3/2569) ขณะที่ตลาดถุงย่อยสลายได้โตด้วย CAGR 7.5–12.8% — ทิศทางสวนกันชัดเจน</p>
+  </div>
 
   <div class="grid g4" style="margin-bottom:20px">
-    <div class="card reveal">
-      <div class="stat-num"><span class="count" data-target="13">13</span>–<span class="count" data-target="18">18</span><small> พันล้าน฿</small></div>
-      <div class="stat-lbl">ตลาดถุงหูหิ้ว+กระตุกไทยรวม (2569) <span class="badge est" style="margin-left:4px">Internal Estimate</span></div>
+    <div class="card top-coral reveal">
+      <div class="stat-num">−<span class="count" data-target="2.7">2.7</span><small>% YoY</small></div>
+      <div class="stat-lbl">ยอดขายถุงพลาสติก<b>ทั่วไป</b>ในประเทศหดตัว (LH Bank เม.ย. 69) <span class="badge ok" style="margin-left:4px">Confirmed</span></div>
     </div>
     <div class="card top-green reveal d1">
-      <div class="stat-num"><span class="count" data-target="3">3</span>–<span class="count" data-target="6">6</span><small>%</small></div>
-      <div class="stat-lbl">สัดส่วน Compostable/PBAT (~0.39–1.10 พันล้าน฿) <span class="badge est" style="margin-left:4px">Internal Estimate</span></div>
+      <div class="stat-num"><span class="count" data-target="7.5">7.5</span><small>% CAGR</small></div>
+      <div class="stat-lbl">ตลาดถุงย่อยสลายได้โลกโต (394→813 M USD, 2569→2579) <span class="badge ok" style="margin-left:4px">Confirmed</span></div>
     </div>
     <div class="card top-teal reveal d2">
       <div class="stat-num"><span class="count" data-target="12.8">12.8</span><small>% CAGR</small></div>
-      <div class="stat-lbl">อัตราการเติบโตตลาด PBAT โลก 2568–2573 <span class="badge ok" style="margin-left:4px">Confirmed</span></div>
+      <div class="stat-lbl">ตลาดเรซิน PBAT โลกโต 2568–2573 <span class="badge ok" style="margin-left:4px">Confirmed</span></div>
     </div>
-    <div class="card top-amber reveal d3">
-      <div class="stat-num">~<span class="count" data-target="50">50</span><small> ฿/กก.</small></div>
-      <div class="stat-lbl">ราคาเรซิน PBAT จากจีน (มิ.ย. 2568) <span class="badge ok" style="margin-left:4px">Confirmed</span></div>
+    <div class="card top-green reveal d3">
+      <div class="stat-num"><span class="count" data-target="38">38</span><small>% ของโลก</small></div>
+      <div class="stat-lbl">Asia-Pacific = ตลาดใหญ่สุดของ bioplastic packaging (1.6 B USD, 2568) <span class="badge ok" style="margin-left:4px">Confirmed</span></div>
     </div>
   </div>
 
   <div class="grid g2">
     <div class="chart-card reveal">
       <div class="chart-head">
-        <div><h3>ตลาด PBAT โลก (พันล้าน USD)</h3><div class="chart-src">MarketsandMarkets · CAGR ~12.8%</div></div>
+        <div><h3>ตลาดถุงย่อยสลายได้โลก (พันล้าน USD)</h3><div class="chart-src">Future Market Insights · CAGR ~7.5%</div></div>
         <span class="badge ok">Confirmed</span>
       </div>
       <div class="chart-wrap"><canvas id="globalChart"></canvas></div>
+      <p class="chart-note">ตลาด "ถุงย่อยสลายได้" กว้างกว่าตลาด "PBAT" — ครอบคลุมทุกวัสดุ compostable (PBAT/PBS/PLA/TPS) ที่ลูกค้าตัดสินใจซื้อด้วยผลลัพธ์เดียวกัน</p>
     </div>
     <div class="chart-card reveal d1">
       <div class="chart-head">
@@ -648,49 +642,37 @@ footer a { color: var(--lime); text-decoration: none; }
         <span class="badge ok">Confirmed</span>
       </div>
       <div class="chart-wrap"><canvas id="capacityChart"></canvas></div>
-      <p class="chart-note">ปี 2569 = ครึ่งปีหลัง — กำลังการผลิตตามดีมานด์ยังไม่ทัน (ถุงหูหิ้วผลิตได้ 832 จากเป้า 3,678 ตัน) → ยุทธศาสตร์ปี 2569 จึงเน้นจัดสรรกำลังผลิตให้ลูกค้ามาร์จินสูง</p>
+      <p class="chart-note">ปี 2569 = ครึ่งปีหลัง กำลังผลิตยังตามดีมานด์ไม่ทัน (หูหิ้ว 832 จากเป้า 3,678 ตัน) → ยุทธศาสตร์เน้นจัดสรรให้ลูกค้ามาร์จินสูงก่อน</p>
     </div>
   </div>
 
   <div class="grid g3 reveal" style="margin-top:18px">
-    <div class="card">
-      <div class="card-ic">⚖️</div>
-      <h3>นโยบายและกฎหมายสนับสนุน</h3>
-      <p class="lead">กฎหมาย EPR คาดบังคับใช้ปี 2570 + แบนแจกถุงฟรีในห้างตั้งแต่ปี 2563 + แผนจัดการขยะพลาสติกระยะ 2 (2566–2570)</p>
-    </div>
-    <div class="card">
-      <div class="card-ic">🏭</div>
-      <h3>เรซินราคาแข่งขันได้จากจีน</h3>
-      <p class="lead">จีนวางกำลังผลิต PBAT ~15 ล้านตัน/ปี ส่งผลให้ราคาเรซินลดลงต่อเนื่อง อย่างไรก็ตาม มีความเสี่ยงจากสินค้าถุงสำเร็จรูปนำเข้าราคาต่ำ</p>
-    </div>
-    <div class="card">
-      <div class="card-ic">🌏</div>
-      <h3>ช่วงเวลาเชิงกลยุทธ์ 2569–2573</h3>
-      <p class="lead">ดีมานด์เพิ่มขึ้นจากกระแส ESG และกฎหมาย ขณะที่ต้นทุนลดลง — ผู้ที่ชนะตลาดคือผู้ที่มีกำลังผลิตพร้อม ระบบเอกสารครบ และใบรับรองมาตรฐาน</p>
-    </div>
+    <div class="card"><div class="card-ic">🛒</div><h3>ผู้บริโภคยอมจ่ายเพิ่ม</h3><p class="lead">75–80% ของผู้บริโภคยอมจ่ายแพงขึ้น 3–5% เพื่อบรรจุภัณฑ์ compostable และยิ่งให้ข้อมูล ยิ่งยอมจ่ายมากขึ้น (McKinsey/Shorr 2025) <span class="badge ok">Confirmed</span></p></div>
+    <div class="card"><div class="card-ic">⚖️</div><h3>กฎหมายเป็นตัวเร่ง</h3><p class="lead">แบนถุง oxo/โฟม/หลอด (ม.ค. 2568) + EPR คาดบังคับ 2570 → ผลักดีมานด์เข้าหาถุงย่อยสลายได้โดยตรง</p></div>
+    <div class="card"><div class="card-ic">🌏</div><h3>ช่วงเวลาเชิงกลยุทธ์</h3><p class="lead">2569–2573 ดีมานด์ขึ้นจาก ESG/กฎหมาย ต้นทุนเรซินลง — ผู้ชนะคือผู้ที่มีกำลังผลิตพร้อม + ใบรับรองครบ</p></div>
   </div>
 </section>
 
 <!-- Insight quote -->
 <div class="sec-gap reveal">
   <div class="insight-quote">
-    <p>ความสำเร็จในตลาดนี้ไม่ได้ขึ้นอยู่กับทักษะการขายเพียงอย่างเดียว<br>
-    แต่ขึ้นอยู่กับ <span class="em">ความพร้อมด้านเอกสาร · ความสามารถในการส่งมอบจริง · และความน่าเชื่อถือของใบรับรองมาตรฐาน</span></p>
+    <p>"ลูกค้าไม่สนใจว่าเราผลิตจากวัสดุอะไร — เขาสนใจว่า<span class="em">พลาสติกตอบโจทย์วิจัยระดับโลกจริงไหม ย่อยสลายได้จริงหรือเปล่า</span>"</p>
+    <p class="src">— สรุป Insight จากผู้บริหาร CPPC (มิ.ย. 2569) · เป็นแกนของรายงานฉบับนี้</p>
   </div>
 </div>
 
 <!-- ═══════════════ 03 · COMPETITION ═══════════════ -->
 <section class="section" id="competition">
   <div class="sec-label reveal">03 · ภูมิทัศน์การแข่งขัน</div>
-  <h2 class="reveal">เปรียบเทียบคู่แข่ง — และช่องที่ CPPC เข้าแทรกได้</h2>
-  <p class="sec-intro reveal">ผู้แข่งขันแต่ละรายมีจุดอ่อนเฉพาะตัว ตารางนี้ชี้ "ช่องว่างตลาด" ที่ CPPC สามารถเข้าแทรกด้วยข้อได้เปรียบที่ผู้อื่นไม่มีพร้อมกัน</p>
+  <h2 class="reveal">คู่แข่งในมุม "ย่อยสลายได้" — กว้างกว่าที่คิด</h2>
+  <p class="sec-intro reveal">เมื่อมองผ่านคำว่า "Biodegradable" จะเห็นผู้เล่นที่เคยมองข้าม เช่น SCG (กระดาษ/mono-material) และ Corbion (PLA) — แต่ละรายเล่นคนละเลน ทำให้เห็นช่องที่ CPPC ยึดได้ชัด</p>
 
   <div class="reveal">
     <div class="cmp-scroll">
       <table class="cmp-table">
         <thead>
           <tr>
-            <th>ผู้เล่นในตลาด</th>
+            <th>ผู้เล่น / เลนที่เล่น</th>
             <th>จุดเด่น</th>
             <th>จุดด้อย / ข้อจำกัด</th>
             <th class="gap-col">ช่องให้ CPPC เข้าแทรก</th>
@@ -698,34 +680,40 @@ footer a { color: var(--lime); text-decoration: none; }
         </thead>
         <tbody>
           <tr>
-            <td><b>TPBI</b><span class="p-type">ไทย · บจ. มหาชน · แบรนด์ "BioPlus"</span></td>
-            <td>แบรนด์ระดับประเทศ เน้นส่งออก · ได้รับใบรับรอง EN 13432 (DIN CERTCO)</td>
-            <td>เน้นตลาดส่งออกและราคาพรีเมียม · ไม่มีช่องทางในเครือ CP</td>
-            <td>ใช้ช่องทาง <b>CP ALL / CP AXTRA (Makro-Lotus)</b> + ความได้เปรียบด้านต้นทุนเรซินในกลุ่ม CP</td>
+            <td><b>SCG Packaging</b><span class="p-type">กระดาษ · mono-material · sugarcane</span></td>
+            <td>ยักษ์ใหญ่ · ลงทุน flexible/recyclable ใหม่ · แบรนด์แข็ง</td>
+            <td>เน้นกระดาษ/recyclable ไม่ใช่ถุงหูหิ้ว PBAT โดยตรง · ราคาสูง</td>
+            <td>ถุงหูหิ้ว/กระตุก <b>compostable เนื้อฟิล์ม</b> ที่ SCG ไม่ได้เล่นเป็นหลัก</td>
           </tr>
           <tr>
-            <td><b>Thantawan Industry</b><span class="p-type">ไทย · ประสบการณ์ 40+ ปี</span></td>
-            <td>ใบรับรองครบ (Seedling EU + BPI) · ความน่าเชื่อถือสูงในวงการ</td>
-            <td>กำลังผลิตและช่องทางจำหน่ายจำกัด · ไม่ใช่ผู้นำด้านต้นทุน</td>
-            <td><b>กำลังผลิตเป้า 2,000 ตัน/ด.</b> + ทีมขายภาคสนามทุกภูมิภาค + Supply Continuity</td>
+            <td><b>TPBI</b><span class="p-type">ไทย · มหาชน · "BioPlus"</span></td>
+            <td>แบรนด์ส่งออก · ใบรับรอง EN 13432 (DIN CERTCO)</td>
+            <td>เน้นส่งออก/พรีเมียม · ไม่มีช่องทางในเครือ CP</td>
+            <td>ช่องทาง <b>CP ALL / CP AXTRA</b> + ต้นทุนเรซินกลุ่ม CP</td>
           </tr>
           <tr>
-            <td><b>Bio Sure / Bags&amp;Gloves</b><span class="p-type">ไทย · SME</span></td>
-            <td>ผลิตจาก PBAT/PLA จริง · มีฉลาก TÜV / GC</td>
-            <td>กำลังผลิตจำกัด · ช่องทางการจำหน่ายแบบ "ขอใบเสนอราคา" — ไม่มีบริการภาคสนาม</td>
-            <td><b>ความต่อเนื่องของการส่งมอบ</b> + บริการและการสนับสนุนทั่วประเทศ</td>
+            <td><b>Thantawan</b><span class="p-type">ไทย · 40+ ปี</span></td>
+            <td>ใบรับรองครบ (Seedling + BPI) · น่าเชื่อถือ</td>
+            <td>กำลังผลิต/ช่องทางจำกัด · ไม่ใช่ผู้นำต้นทุน</td>
+            <td><b>กำลังผลิต 2,000 ตัน/ด.</b> + field sales ทุกภาค</td>
           </tr>
           <tr>
-            <td><b>สินค้านำเข้าจากจีน</b><span class="p-type">Kingfa · Wanhua · OEM ต่างๆ</span></td>
-            <td>ราคาต่ำสุดในตลาด · กำลังผลิตล้นเกิน (~15 ล้านตัน/ปี)</td>
-            <td>Lead Time ยาว · ไม่มีการบริการหลังการขายในไทย · ขาดใบรับรองตามมาตรฐานไทย · ความเสี่ยงด้านคุณภาพ</td>
-            <td><b>ผลิตในประเทศ</b> + บริการหลังการขาย + ใบรับรองมาตรฐาน + ส่งมอบรวดเร็ว</td>
+            <td><b>Advance Bio / Bio Sure</b><span class="p-type">ไทย · SME · PBAT blend</span></td>
+            <td>ผลิต compostable จริง · มีฉลาก TÜV/GC</td>
+            <td>กำลังผลิตจำกัด · ขายแบบ "ขอใบเสนอราคา"</td>
+            <td><b>Supply continuity</b> + บริการครอบคลุมทั่วประเทศ</td>
+          </tr>
+          <tr>
+            <td><b>สินค้านำเข้าจีน</b><span class="p-type">Kingfa · Wanhua · OEM</span></td>
+            <td>ราคาต่ำสุด · กำลังผลิตล้น (~15 ล้านตัน/ปี)</td>
+            <td>Lead time ยาว · ไม่มีบริการ/ใบรับรองในไทย · เสี่ยงคุณภาพ</td>
+            <td><b>ผลิตในไทย</b> + บริการ + ใบรับรอง + ส่งเร็ว</td>
           </tr>
           <tr class="us">
-            <td><b>CPPC (บริษัทของเรา)</b><span class="p-type">ไทย · โรงงานในเครือ CP · สีคิ้ว</span></td>
-            <td>กำลังผลิตระดับโรงงาน + ช่องทางในเครือ CP + ต้นทุนเรซินกลุ่ม CP + ทีมขายภาคสนามทุกภาค</td>
-            <td>ส่วนต่างราคากับ PE ยังสูง (แก้ด้วยกลยุทธ์ Gauge Optimisation) · ใบรับรอง Compostable อยู่ระหว่างดำเนินการ (คาด ก.ค.–ก.ย. 2569)</td>
-            <td>จุดยืนที่ชัดเจน: <b>รวมทุกข้อได้เปรียบที่คู่แข่งไม่มีพร้อมกันในรายเดียว</b></td>
+            <td><b>CPPC (เรา)</b><span class="p-type">ไทย · โรงงานเครือ CP · สีคิ้ว</span></td>
+            <td>กำลังผลิต + ช่องในเครือ + เรซิน PBAT/PBS + field sales ทุกภาค</td>
+            <td>ส่วนต่างราค้ายังสูง (แก้ด้วย Gauge) · ใบรับรองอยู่ระหว่างดำเนินการ (ก.ค.–ก.ย. 69)</td>
+            <td>จุดยืน: <b>รวมทุกข้อได้เปรียบที่คู่แข่งไม่มีพร้อมกัน</b></td>
           </tr>
         </tbody>
       </table>
@@ -734,120 +722,138 @@ footer a { color: var(--lime); text-decoration: none; }
 
   <div class="card reveal d1 top-green" style="margin-top:20px">
     <h3>ช่องว่างตลาด = โอกาสเชิงกลยุทธ์ของ CPPC</h3>
-    <p class="lead">ไม่มีผู้แข่งขันรายใดในตลาดที่ <b>รวมกำลังผลิตระดับโรงงาน + ช่องทางในเครือ CP + ทีมขายภาคสนามทุกภูมิภาค + ต้นทุนเรซินจากกลุ่ม CP</b> ได้พร้อมกันในรายเดียว — นั่นคือจุดยืนที่แตกต่างและแข่งขันได้อย่างยั่งยืน</p>
+    <p class="lead">ไม่มีผู้แข่งขันรายใดที่ <b>รวมกำลังผลิตระดับโรงงาน + ช่องทางในเครือ CP + ทีมขายภาคสนามทุกภูมิภาค + ต้นทุนเรซิน PBAT/PBS ในเครือ</b> ได้พร้อมกัน — SCG เล่นกระดาษ/recyclable, TPBI เน้นส่งออก, จีนไม่มีบริการในไทย</p>
     <div class="tags" style="margin-top:12px">
-      <span class="tag hot">เครือ CP = ช่องทาง + ต้นทุนเรซิน</span>
-      <span class="tag">เป้ากำลังผลิต 2,000 ตัน/ด.</span>
+      <span class="tag hot">เครือ CP = ช่องทาง + เรซิน</span>
+      <span class="tag">กำลังผลิต 2,000 ตัน/ด.</span>
       <span class="tag">Supply Continuity</span>
       <span class="tag hot">Field Sales ทุกภูมิภาค</span>
       <span class="tag">Gauge Optimisation</span>
     </div>
-    <p class="note">วัตถุดิบทางเลือกในประเทศ: PTT MCC BioPBS (GC×Mitsubishi, 20,000 ตัน/ปี) · Thai Wah TPS — ส่วนแบ่งตลาดรายบริษัทยังขาดข้อมูลสาธารณะ <span class="badge gap">Pending Validation</span> ควรดึงข้อมูลจากกรมพัฒนาธุรกิจการค้า (DBD)</p>
+    <p class="note">ส่วนแบ่งตลาดรายบริษัทยังขาดข้อมูลสาธารณะ <span class="badge gap">Pending Validation</span> ควรดึงจากกรมพัฒนาธุรกิจการค้า (DBD)</p>
   </div>
 </section>
 
 <!-- ═══════════════ 04 · CUSTOMERS ═══════════════ -->
 <section class="section" id="customers">
-  <div class="sec-label reveal">04 · กลุ่มลูกค้าเป้าหมาย &amp; ช่องทางจำหน่าย</div>
-  <h2 class="reveal">กลุ่มลูกค้าเป้าหมาย — และลำดับการบุก</h2>
-  <p class="sec-intro reveal">เริ่มจากลูกค้าในเครือ CP เป็น Anchor แล้วขยายออกสู่ลูกค้านอกเครือ 3 ระดับ ผ่านทีมขายภาคสนามทุกภูมิภาค — ไม่ใช่กลยุทธ์ขายออนไลน์</p>
+  <div class="sec-label reveal">04 · กลุ่มลูกค้าเป้าหมาย</div>
+  <h2 class="reveal">ฝ่ายจัดซื้อถามอะไร — และไม่ถามอะไร</h2>
+  <p class="sec-intro reveal">เริ่มจากลูกค้าในเครือ CP เป็น Anchor แล้วขยายนอกเครือ 3 ระดับ ผ่านทีมขายภาคสนามทุกภูมิภาค โดยเข้าใจลำดับคำถามจริงของฝ่ายจัดซื้อ</p>
+
+  <div class="grid g2 reveal" style="margin-bottom:18px">
+    <div class="card top-green">
+      <h3>ลำดับคำถามจริงของฝ่ายจัดซื้อ</h3>
+      <ol class="pq">
+        <li>ย่อยสลายได้จริงไหม → <b>ขอใบรับรอง</b> (EN 13432 / มอก.17088)</li>
+        <li>ไมโครพลาสติกตกค้างไหม → <b>Claim + test report</b></li>
+        <li>Carbon เท่าไร → <b>LCA สำหรับ Scope 3</b></li>
+        <li>ส่วนต่างราคา vs ถุงเดิมเท่าไร</li>
+        <li>ส่งได้ต่อเนื่องไหม (supply continuity)</li>
+        <li class="no">ทำจากวัสดุอะไร → <b>โดยทั่วไปไม่ถาม</b></li>
+      </ol>
+      <p class="note">ข้อ 6 ยืนยัน insight ผู้บริหาร: วัตถุดิบไม่ใช่ปัจจัยตัดสินใจ</p>
+    </div>
+    <div class="card top-teal">
+      <h3>DMU ที่ต้องเข้าให้ครบ</h3>
+      <p class="lead" style="margin-bottom:10px">ขายถุงย่อยสลายได้ต้องเข้าหลายฝ่าย ไม่ใช่แค่จัดซื้อ — โดยเฉพาะฝ่าย Sustainability ที่เป็นคน "อยาก" เปลี่ยน</p>
+      <div class="tags">
+        <span class="tag hot">Sustainability / CSR</span>
+        <span class="tag">ฝ่ายจัดซื้อ (Procurement)</span>
+        <span class="tag">ฝ่ายพัฒนาบรรจุภัณฑ์</span>
+        <span class="tag">QA / QC</span>
+        <span class="tag">ฝ่ายปฏิบัติการ</span>
+        <span class="tag">ฝ่ายการเงิน</span>
+      </div>
+      <div class="warn-box" style="margin-top:14px">
+        <p>ข้อมูลวิจัย: การ "ให้ข้อมูล" เรื่องการย่อยสลายเพิ่มความเต็มใจจ่ายของลูกค้าอย่างมีนัยสำคัญ → ทีมขายที่อธิบายเก่ง = ปิดราคาได้สูงขึ้น</p>
+      </div>
+    </div>
+  </div>
 
   <div class="tier t1 reveal">
     <div class="tier-num">1</div>
     <div style="flex:1">
-      <h3>Modern Trade / Supermarket (หลายรูปแบบ)</h3>
-      <p class="lead">ปริมาณการใช้ถุงสม่ำเสมอ ระบบจัดซื้อชัดเจน มี KPI ด้าน ESG — กลุ่มที่บุกก่อน</p>
-      <div class="tags">
-        <span class="tag">Big C</span><span class="tag">Tops / Tops Daily</span><span class="tag">GO Wholesale</span>
-        <span class="tag">Foodland</span><span class="tag">Gourmet Market</span><span class="tag">Villa Market</span><span class="tag">MaxValu</span>
-      </div>
+      <h3>Modern Trade / Supermarket</h3>
+      <p class="lead">ปริมาณใช้ถุงสม่ำเสมอ ระบบจัดซื้อชัด มี ESG KPI — บุกก่อน</p>
+      <div class="tags"><span class="tag">Big C</span><span class="tag">Tops / Tops Daily</span><span class="tag">GO Wholesale</span><span class="tag">Foodland</span><span class="tag">Gourmet Market</span><span class="tag">Villa Market</span><span class="tag">MaxValu</span></div>
     </div>
   </div>
-
   <div class="tier t2 reveal d1">
     <div class="tier-num">2</div>
     <div style="flex:1">
-      <h3>Chain HORECA / QSR (ระบบจัดซื้อรวมศูนย์)</h3>
-      <p class="lead">การเปลี่ยนบรรจุภัณฑ์สะท้อนภาพลักษณ์แบรนด์ทันที — ขายแบบ Rollout ทั้งเครือข่ายในครั้งเดียว</p>
+      <h3>Chain HORECA / QSR (จัดซื้อรวมศูนย์)</h3>
+      <p class="lead">เปลี่ยนบรรจุภัณฑ์ = สะท้อนแบรนด์ทันที — ขายแบบ Rollout ทั้งเครือข่าย</p>
       <table class="cust-table" style="margin-top:12px">
-        <thead>
-          <tr><th>บริษัท / แบรนด์</th><th>ประเภท</th><th>เป้าหมายเบื้องต้น</th></tr>
-        </thead>
+        <thead><tr><th>บริษัท / แบรนด์</th><th>ประเภท</th><th>เป้าหมายเบื้องต้น</th></tr></thead>
         <tbody>
           <tr><td>McDonald's Thailand</td><td>QSR</td><td class="target">25 ตัน/ด.</td></tr>
           <tr><td>KFC Thailand</td><td>QSR</td><td class="target">45 ตัน/ด.</td></tr>
-          <tr><td>MK Group</td><td>ร้านอาหาร Casual Dining</td><td class="target">อยู่ระหว่างประเมิน</td></tr>
-          <tr><td>The Pizza Company / Burger King</td><td>QSR</td><td class="target">อยู่ระหว่างประเมิน</td></tr>
-          <tr><td>Punthai Coffee / Coffee chains</td><td>F&amp;B</td><td class="target">อยู่ระหว่างประเมิน</td></tr>
+          <tr><td>MK Group</td><td>Casual Dining</td><td class="target">อยู่ระหว่างประเมิน</td></tr>
+          <tr><td>The Pizza Co. / Burger King</td><td>QSR</td><td class="target">อยู่ระหว่างประเมิน</td></tr>
+          <tr><td>Punthai / Coffee chains</td><td>F&amp;B</td><td class="target">อยู่ระหว่างประเมิน</td></tr>
         </tbody>
       </table>
-      <p class="note">ยอด QSR อ้างอิงจากแผนธุรกิจบริษัท <span class="badge est">Internal Estimate</span> — ต้องยืนยันก่อนนำเสนอลูกค้า</p>
+      <p class="note">ยอด QSR อ้างอิงแผนธุรกิจบริษัท <span class="badge est">Internal Estimate</span> — ต้องยืนยันก่อนนำเสนอลูกค้า · McDonald's global ตั้งเป้า packaging ยั่งยืน &gt;90% แล้ว = ประตูเปิด</p>
     </div>
   </div>
-
   <div class="tier t3 reveal d2">
     <div class="tier-num">3</div>
     <div style="flex:1">
       <h3>ผู้จัดจำหน่าย Foodservice / ค้าส่ง</h3>
-      <p class="lead">ช่องทางเข้าถึง HORECA หลายรายพร้อมกัน ลดต้นทุนการขายต่อบัญชี</p>
-      <div class="tags">
-        <span class="tag">GO Wholesale (B2B)</span>
-        <span class="tag">CP Axtra Platform</span>
-        <span class="tag">ผู้จัดจำหน่ายย่านสำเพ็ง</span>
-      </div>
+      <p class="lead">ช่องทางเข้าถึง HORECA หลายรายพร้อมกัน</p>
+      <div class="tags"><span class="tag">GO Wholesale (B2B)</span><span class="tag">CP Axtra Platform</span><span class="tag">ผู้จัดจำหน่ายย่านสำเพ็ง</span></div>
     </div>
   </div>
 
   <h3 class="reveal" style="margin-top:32px">ลำดับการบุกตามภูมิภาค (Field Sales Rollout)</h3>
   <div class="card reveal d1" style="margin-top:12px;padding:12px">
     <div class="rollout">
-      <div class="region"><h4>กทม.–ปริมณฑล</h4><p>สำนักงานใหญ่ผู้ซื้อรวมศูนย์ + ความหนาแน่นสาขาสูงสุด</p></div>
-      <div class="region"><h4>ชลบุรี / EEC</h4><p>ศูนย์กลางโลจิสติกส์ + โรงงานอุตสาหกรรม</p></div>
-      <div class="region"><h4>ภูเก็ต</h4><p>เมืองท่องเที่ยว — แรงจูงใจ ESG สูงจากนักท่องเที่ยวต่างชาติ</p></div>
-      <div class="region"><h4>เชียงใหม่ · ขอนแก่น</h4><p>ศูนย์กลางภูมิภาคเหนือและอีสาน</p></div>
-      <div class="region"><h4>สงขลา / ภาคใต้</h4><p>ขยายครอบคลุมภูมิภาค</p></div>
+      <div class="region"><h4>กทม.–ปริมณฑล</h4><p>สนง.ใหญ่ผู้ซื้อ + ความหนาแน่นสาขาสูงสุด</p></div>
+      <div class="region"><h4>ชลบุรี / EEC</h4><p>ศูนย์โลจิสติกส์ + โรงงาน</p></div>
+      <div class="region"><h4>ภูเก็ต</h4><p>ท่องเที่ยว — แรงจูงใจ ESG สูง</p></div>
+      <div class="region"><h4>เชียงใหม่ · ขอนแก่น</h4><p>ศูนย์กลางภูมิภาค</p></div>
+      <div class="region"><h4>สงขลา / ใต้</h4><p>ขยายครอบคลุม</p></div>
     </div>
   </div>
-  <p class="note reveal">ผู้มีอำนาจตัดสินใจหลัก (DMU) ที่ต้องเข้าพบให้ครบ: ฝ่ายจัดซื้อ · ฝ่ายพัฒนาบรรจุภัณฑ์ · ฝ่าย QA/QC · ฝ่าย Sustainability/CSR · ฝ่ายปฏิบัติการ · ฝ่ายการเงิน</p>
 </section>
 
 <!-- ═══════════════ 05 · PRICING ═══════════════ -->
 <section class="section" id="pricing">
   <div class="sec-label reveal">05 · ราคาและกลยุทธ์ส่วนต่าง</div>
   <h2 class="reveal">โครงสร้างราคา &amp; กลยุทธ์ลดส่วนต่าง</h2>
-  <p class="sec-intro reveal">อุปสรรคหลักคือราคา ไม่ใช่ความต้องการ — ลูกค้าประเมินจาก "ต้นทุนต่อการใช้งาน + การลดความเสี่ยงด้านแบรนด์" ไม่ใช่แค่บาท/กิโลกรัม</p>
+  <p class="sec-intro reveal">อุปสรรคหลักคือราคา ไม่ใช่ความต้องการ — และข้อมูลวิจัยล่าสุดยืนยันว่าโซน "ยอมจ่ายเพิ่ม 3–5%" คือจุดที่ปิดได้จริง</p>
 
   <div class="grid g2">
     <div class="card reveal">
-      <h3>ระดับส่วนต่างราคาที่ลูกค้ายอมรับ (เทียบกับ PE) <span class="badge est" style="margin-left:6px">Internal Estimate</span></h3>
-      <div style="margin-top:16px">
+      <h3>ระดับส่วนต่างที่ลูกค้ายอมรับ (vs PE)</h3>
+      <p class="lead" style="margin:6px 0 14px">ยืนยันด้วยผลสำรวจผู้บริโภค 2025 (McKinsey/Shorr): 75–80% ยอมจ่ายเพิ่ม 3–5% สำหรับ compostable</p>
+      <div>
         <div class="gauge-row">
-          <div class="gauge-top"><span>0–5% — ขายได้ทันที (สเปคใกล้เคียง + ใบรับรองครบ)</span><b>ง่าย</b></div>
+          <div class="gauge-top"><span>0–5% — ขายได้ทันที (สเปคใกล้เดิม + ใบรับรอง)</span><b>ง่าย</b></div>
           <div class="track"><div class="fill" data-w="100%" style="background:linear-gradient(90deg,var(--forest),var(--lime))"></div></div>
         </div>
         <div class="gauge-row">
-          <div class="gauge-top"><span>5–12% — ขายได้เมื่อมี ESG KPI หรือแคมเปญ</span><b>ปานกลาง</b></div>
+          <div class="gauge-top"><span>5–12% — ได้เมื่อมี ESG KPI / แคมเปญ</span><b>ปานกลาง</b></div>
           <div class="track"><div class="fill" data-w="62%" style="background:linear-gradient(90deg,var(--teal),#7fd4d3)"></div></div>
         </div>
         <div class="gauge-row">
-          <div class="gauge-top"><span>&gt;12% — ขายยาก เฉพาะโครงการ Pilot หรือ Premium Brand</span><b>ยาก</b></div>
+          <div class="gauge-top"><span>&gt;12% — ขายยาก (เฉพาะ Pilot/Premium)</span><b>ยาก</b></div>
           <div class="track"><div class="fill" data-w="28%" style="background:linear-gradient(90deg,var(--coral),var(--amber))"></div></div>
         </div>
       </div>
-      <p class="note">สถานการณ์ปัจจุบัน CPPC: ถุงหูหิ้ว +14–16% · ถุงกระตุก +6–26% → จำเป็นต้องใช้กลยุทธ์ Gauge Optimisation เพื่อดึงราคาเข้าโซน ≤12%</p>
+      <p class="note">CPPC ปัจจุบัน: หูหิ้ว +14–16% · กระตุก +6–26% → ใช้ Gauge Optimisation ดึงเข้าโซน ≤12%</p>
     </div>
 
     <div class="card top-amber reveal d1">
       <h3>กลยุทธ์การปรับความหนา (Gauge Optimisation)</h3>
       <div class="stat-num" style="margin:10px 0 4px">+25% → +7%</div>
-      <p class="stat-lbl">ถุงกระตุก: ลดความหนา 15→10 ไมครอน/ด้าน ตัดส่วนต่างราคาจาก ~25% เหลือ ~7% โดยยังใช้งานได้ตามปกติ</p>
+      <p class="stat-lbl">ถุงกระตุก: ลดความหนา 15→10 ไมครอน/ด้าน ตัดส่วนต่างจาก ~25% เหลือ ~7% โดยยังใช้งานได้</p>
 
-      <h3 style="margin-top:22px">ข้อมูลตลาดออนไลน์เพื่อการวิเคราะห์</h3>
+      <h3 style="margin-top:22px">EPR 2570 จะลดช่องว่างราคาเอง</h3>
       <ul class="ticks">
-        <li>ผู้ขายส่วนใหญ่ <b>ไม่แสดงราคา List — ใช้ระบบ "ขอใบเสนอราคา"</b> ยืนยันว่าตลาดนี้เป็น B2B เชิงความสัมพันธ์</li>
-        <li>ราคาขายส่งถุงขยะ Compostable ~85–90 ฿/กก. (MOQ 1,000 กก.) <span class="badge est">Internal Estimate</span></li>
-        <li>ตลาด Retail: แบรนด์ "Smarter" วางจำหน่ายถุงขยะย่อยสลายบน Tops Online</li>
-        <li><b>ข้อสรุป:</b> การแข่งขันจริงอยู่ใน Offline Relationship Selling — ซึ่งเป็นจุดแข็งของ CPPC</li>
+        <li>EPR fee <b>1.2–1.5 บาท/แพ็ค</b> เพิ่มต้นทุนถุงทั่วไป → gap แคบลงโดยอัตโนมัติ</li>
+        <li>ราคาขายส่งถุงขยะ compostable ~85–90 ฿/กก. (MOQ 1,000 กก.) <span class="badge est">Internal Estimate</span></li>
+        <li>ตลาดออนไลน์ส่วนใหญ่ <b>ไม่โชว์ราคา — ใช้ "ขอใบเสนอราคา"</b> = ตลาด B2B เชิงสัมพันธ์ (เข้าทาง CPPC)</li>
       </ul>
     </div>
   </div>
@@ -855,30 +861,18 @@ footer a { color: var(--lime); text-decoration: none; }
 
 <!-- ═══════════════ 06 · ESG / LEGAL ═══════════════ -->
 <section class="section" id="esg">
-  <div class="sec-label reveal">06 · กฎหมาย / ESG / การรับรองมาตรฐาน</div>
-  <h2 class="reveal">การรับรองมาตรฐาน = ปัจจัยกรองความน่าเชื่อถือ</h2>
-  <p class="sec-intro reveal">ลูกค้าองค์กรซื้อ "การอ้างสิทธิ์ที่ตรวจสอบได้" — คาร์บอนที่ต่ำกว่าช่วยตอบรายงาน ESG / Scope 3 ของลูกค้าได้จริง</p>
+  <div class="sec-label reveal">06 · กฎหมาย / ESG / การรับรอง</div>
+  <h2 class="reveal">ใบรับรอง = หัวใจของการเคลม (และเกราะกัน Greenwashing)</h2>
+  <p class="sec-intro reveal">ลูกค้าองค์กรซื้อ "claim ที่ตรวจสอบได้" — และเคลมเรื่องการย่อยสลาย/ไมโครพลาสติกต้องผูกกับใบรับรองและเงื่อนไขการ compost เสมอ เพื่อกันความเสี่ยงทางกฎหมาย</p>
 
   <div class="grid g2">
     <div class="card reveal">
-      <h3>ไทม์ไลน์กฎหมายและนโยบาย</h3>
+      <h3>ไทม์ไลน์กฎหมาย (ตัวเร่งดีมานด์)</h3>
       <div class="timeline" style="margin-top:12px">
-        <div class="tl-ev">
-          <div class="yr">2563</div>
-          <p class="lead">แบนการแจกถุงพลาสติกฟรีในซูเปอร์มาร์เก็ตและห้างค้าปลีก → ลดการใช้ได้ 43% (~148,000 ตัน) <span class="badge ok">Confirmed</span></p>
-        </div>
-        <div class="tl-ev">
-          <div class="yr">2566–2570</div>
-          <p class="lead">แผนจัดการขยะพลาสติกแห่งชาติ ระยะ 2 + นำร่องระบบ EPR ที่ชลบุรี (ม.ค. 2567)</p>
-        </div>
-        <div class="tl-ev">
-          <div class="yr">ก.ค.–ก.ย. 2569</div>
-          <p class="lead">CPPC อยู่ระหว่างดำเนินการขอรับรองมาตรฐาน Home Compost และ Industrial Compost <span class="badge est">อยู่ระหว่างดำเนินการ</span></p>
-        </div>
-        <div class="tl-ev">
-          <div class="yr">2570</div>
-          <p class="lead">กฎหมาย EPR คาดบังคับใช้อย่างเป็นทางการ + เป้าหมาย Recyclable 100% ตามแผน</p>
-        </div>
+        <div class="tl-ev hot"><div class="yr">1 ม.ค. 2568</div><p class="lead">แบน oxo-degradable, กล่องโฟม, หลอดพลาสติก · โทษปรับสูงสุด <b>100,000 บาท/ครั้ง</b> <span class="badge ok">Confirmed</span></p></div>
+        <div class="tl-ev"><div class="yr">2566–2570</div><p class="lead">แผนจัดการขยะพลาสติกระยะ 2 + นำร่อง EPR ชลบุรี (ม.ค. 2567)</p></div>
+        <div class="tl-ev"><div class="yr">ก.ค.–ก.ย. 2569</div><p class="lead">CPPC อยู่ระหว่างขอรับรอง Home/Industrial Compost <span class="badge est">อยู่ระหว่างดำเนินการ</span></p></div>
+        <div class="tl-ev hot"><div class="yr">2570</div><p class="lead">EPR (Sustainable Packaging Act) คาดบังคับ · ผู้ผลิตจ่าย <b>1.2–1.5 ฿/แพ็ค</b> เข้ากองทุน PRO <span class="badge ok">Confirmed</span></p></div>
       </div>
       <p class="note">มาตรฐานอ้างอิง: มอก.17088 · ISO 17088 · ASTM D6400 · EN 13432 · AS 5810 (Home Compost)</p>
     </div>
@@ -886,123 +880,87 @@ footer a { color: var(--lime); text-decoration: none; }
     <div>
       <div class="chart-card reveal d1">
         <div class="chart-head">
-          <div><h3>Carbon Footprint (kg CO₂e / กก.)</h3><div class="chart-src">LCA + สำนักงาน TGO · ยิ่งต่ำยิ่งดี</div></div>
+          <div><h3>Carbon Footprint (kg CO₂e / กก.)</h3><div class="chart-src">LCA + TGO · ยิ่งต่ำยิ่งดี</div></div>
           <span class="badge ok">Confirmed</span>
         </div>
         <div class="chart-wrap tall"><canvas id="carbonChart"></canvas></div>
-        <p class="chart-note">PBAT ปล่อยคาร์บอนต่ำกว่า PE ~20–50% — ลูกค้าค้าปลีก/QSR นำไปรายงาน ESG และ Scope 3 Emission ได้จริง</p>
-      </div>
-
-      <div class="card reveal d2" style="margin-top:16px">
-        <h3 style="margin-bottom:12px">สถานะการรับรองมาตรฐาน CPPC</h3>
-        <table class="cert-table">
-          <tr><td>การทดสอบเชิงกล (Drop/Jog/Load)</td><td><span class="badge ok">ผ่านการทดสอบแล้ว</span></td></tr>
-          <tr><td>Home/Industrial Compost Certification</td><td><span class="badge est">อยู่ระหว่างดำเนินการ (คาด ก.ค.–ก.ย. 2569)</span></td></tr>
-          <tr><td>มอก.17088 (ไทย)</td><td><span class="badge gap">อยู่ระหว่างประเมิน</span></td></tr>
-          <tr><td>Food Contact Approval (อย.)</td><td><span class="badge gap">ต้องตรวจสอบเพิ่มเติม</span></td></tr>
-        </table>
-        <div class="warn-box">
-          <p>การสื่อสารคุณสมบัติการย่อยสลายและการรับรองมาตรฐานต่อลูกค้าและสาธารณะ ต้องอ้างอิงตามเอกสารและใบรับรองฉบับล่าสุดเท่านั้น ห้ามอ้างสถานะที่ยังไม่ได้รับการยืนยันอย่างเป็นทางการ</p>
-        </div>
+        <p class="chart-note">ต่ำกว่า PE ~20–50% — ลูกค้าค้าปลีก/QSR นำไปรายงาน ESG/Scope 3 ได้จริง</p>
       </div>
     </div>
   </div>
 
-  <div class="card reveal d2 top-coral" style="margin-top:18px">
-    <h3>ข้อพึงระวัง — Greenwashing Risk</h3>
-    <div class="tags">
-      <span class="tag">ห้ามอ้างว่า "ย่อยสลายได้" เกินขอบเขตที่ใบรับรองรับรอง (สคบ.)</span>
-      <span class="tag">จัดทำ Claim &amp; Logo Guideline ให้ลูกค้าที่จะนำไปสื่อสาร</span>
-      <span class="tag">ระบุเงื่อนไขการเก็บรักษาและอายุผลิตภัณฑ์ PBAT</span>
-      <span class="tag">ผู้บริโภคทิ้งผิดระบบ = ไม่ย่อยสลายตามที่ระบุ</span>
-      <span class="tag">ผลิตภัณฑ์ที่สัมผัสอาหารต้องผ่านการตรวจสอบจาก อย.</span>
+  <!-- microplastic honesty section -->
+  <div class="card reveal d1 top-coral" style="margin-top:18px">
+    <h3>⚠️ เคลม "ไม่มีไมโครพลาสติก" — ต้องระวังให้ถูกต้อง</h3>
+    <p class="lead">งานวิจัยล่าสุด (2024–2025, ScienceDirect/PMC) พบว่า PBAT ที่ทิ้ง<b>ผิดสภาวะ</b> (ลงดิน/ทะเลแทนการ compost) ย่อยช้าและอาจเกิดไมโครพลาสติกชั่วคราว + สารตกค้าง การเคลม "ไม่มีไมโครพลาสติก" แบบไม่มีเงื่อนไขจึงเสี่ยงผิด สคบ. และถูกมองว่า Greenwashing</p>
+    <div class="say-grid" style="margin-top:16px">
+      <div class="say-col dont">
+        <h4>✕ เคลมที่เสี่ยง</h4>
+        <div class="say-line">"ถุงเราไม่มีไมโครพลาสติก 100%"</div>
+        <div class="say-line">"ย่อยสลายได้ทุกที่ทุกสภาวะ"</div>
+        <div class="say-line">"ทิ้งที่ไหนก็ย่อย"</div>
+      </div>
+      <div class="say-col do">
+        <h4>✓ เคลมที่ปลอดภัย + ขายได้</h4>
+        <div class="say-line">"ผ่านการรับรอง Compostable (EN 13432)"</div>
+        <div class="say-line">"ย่อยสมบูรณ์เป็น CO₂/น้ำ/ชีวมวล ภายใต้สภาวะ compost ที่กำหนด"</div>
+        <div class="say-line">"พร้อม Test Report + Claim Guideline ให้ลูกค้า"</div>
+      </div>
     </div>
+    <div class="warn-box red" style="margin-top:16px">
+      <p>การสื่อสารคุณสมบัติการย่อยสลายต่อลูกค้าและสาธารณะ ต้องอ้างอิงเอกสาร/ใบรับรองฉบับล่าสุดเสมอ และระบุเงื่อนไขการกำจัด — ใบรับรองจึงเป็น "เกราะ" ที่คู่แข่งนำเข้าไม่มี = จุดขายที่แข็งแรงกว่าเคลมลอยๆ</p>
+    </div>
+  </div>
+
+  <div class="card reveal d2" style="margin-top:18px">
+    <h3 style="margin-bottom:12px">สถานะการรับรองมาตรฐาน CPPC</h3>
+    <table class="kv-table">
+      <tr><td>การทดสอบเชิงกล (Drop/Jog/Load)</td><td><span class="badge ok">ผ่านการทดสอบแล้ว</span></td></tr>
+      <tr><td>Home/Industrial Compost Certification</td><td><span class="badge est">อยู่ระหว่างดำเนินการ (คาด ก.ค.–ก.ย. 69)</span></td></tr>
+      <tr><td>มอก.17088 (ไทย)</td><td><span class="badge gap">อยู่ระหว่างประเมิน</span></td></tr>
+      <tr><td>Food Contact Approval (อย.)</td><td><span class="badge gap">ต้องตรวจสอบเพิ่มเติม</span></td></tr>
+    </table>
   </div>
 </section>
 
 <!-- ═══════════════ 07 · PLAYBOOK ═══════════════ -->
 <section class="section" id="playbook">
   <div class="sec-label reveal">07 · แนวทางการขาย (Field Sales)</div>
-  <h2 class="reveal">แนวทางสร้างความได้เปรียบในการแข่งขันของ CPPC</h2>
-  <p class="sec-intro reveal">จุดแข็ง CPPC คือโรงงานผลิตจริง + ทีมขายทุกภูมิภาค — ดำเนินการขายแบบ Account-Based Selling พร้อมส่งตัวอย่างและทดสอบร่วมกับลูกค้า ซึ่งผู้นำเข้าและผู้ขายออนไลน์ทำแทนไม่ได้</p>
+  <h2 class="reveal">ขายด้วยผลลัพธ์ ปิดด้วยเอกสาร</h2>
+  <p class="sec-intro reveal">จุดแข็ง CPPC คือโรงงานผลิตจริง + ทีมขายทุกภูมิภาค — เปิดด้วยผลลัพธ์ที่ลูกค้าซื้อ ทดสอบร่วม แล้วปิดด้วยชุดเอกสารที่ผู้นำเข้า/ออนไลน์ทำแทนไม่ได้</p>
 
-  <div class="wave reveal">
-    <div class="w-no">1</div>
-    <div>
-      <h3>ชนะด้านข้อกำหนดทางเทคนิค (Win the Spec)</h3>
-      <p class="lead">ส่ง Sample Kit + เอกสารทางเทคนิค (ความหนา, แรงดึง, Static Load, การปิดผนึก, Drop Test, แผนการรับรองมาตรฐาน) ให้ฝ่าย QA/Packaging อนุมัติก่อน — การตัดสินใจของฝ่ายจัดซื้อขึ้นอยู่กับความพร้อมด้านเอกสารและการรับรองมาตรฐาน</p>
-    </div>
-  </div>
-  <div class="wave w2 reveal d1">
-    <div class="w-no">2</div>
-    <div>
-      <h3>ชนะด้านการทดลองใช้ (Win the Pilot)</h3>
-      <p class="lead">คัดเลือก 6–10 บัญชีนอกเครือ กำหนด KPI (ข้อร้องเรียน/ล้านใบ, ความเสียหาย, OTIF) → เมื่อ Pilot ผ่าน เปลี่ยนเป็น Framework Deal ทันที</p>
-    </div>
-  </div>
-  <div class="wave w3 reveal d2">
-    <div class="w-no">3</div>
-    <div>
-      <h3>ชนะด้านกระบวนการจัดซื้อ (Win the Procurement)</h3>
-      <p class="lead">เตรียม 3 ชุดเอกสาร: <b>Commercial</b> (ราคา/สูตรปรับตามต้นทุน) · <b>Technical</b> (COA/Spec/Test Report) · <b>Sustainability</b> (ใบรับรอง/Claim/Logo Guideline)</p>
-    </div>
-  </div>
+  <div class="wave reveal"><div class="w-no">1</div><div><h3>ชนะด้านข้อกำหนดทางเทคนิค (Win the Spec)</h3><p class="lead">ส่ง Sample Kit + เอกสารทางเทคนิค (ความหนา, แรงดึง, Static Load, การปิดผนึก, Drop, แผนใบรับรอง) ให้ QA/Packaging อนุมัติก่อน — การตัดสินใจของฝ่ายจัดซื้อขึ้นกับความพร้อมด้านเอกสารและการรับรอง</p></div></div>
+  <div class="wave w2 reveal d1"><div class="w-no">2</div><div><h3>ชนะด้านการทดลองใช้ (Win the Pilot)</h3><p class="lead">คัด 6–10 บัญชีนอกเครือ ตั้ง KPI (ข้อร้องเรียน/ล้านใบ, ความเสียหาย, OTIF) → Pilot ผ่าน เปลี่ยนเป็น Framework Deal ทันที</p></div></div>
+  <div class="wave w3 reveal d2"><div class="w-no">3</div><div><h3>ชนะด้านกระบวนการจัดซื้อ (Win the Procurement)</h3><p class="lead">เตรียม 3 ชุด: <b>Commercial</b> (ราคา/สูตรปรับ) · <b>Technical</b> (COA/Spec/Test) · <b>Sustainability</b> (ใบรับรอง/Claim/Logo Guideline)</p></div></div>
 
   <div class="grid g3 reveal d1" style="margin-top:20px">
-    <div class="card top-green">
-      <div class="card-ic">📑</div>
-      <h3>โครงสร้างสัญญา 3 ระดับ</h3>
-      <p class="lead">Pilot PO 1–3 เดือน → Annual Framework + Monthly Release (ผูกสูตรปรับตาม Resin/FX) → Co-Development (Private Label)</p>
-    </div>
-    <div class="card top-teal">
-      <div class="card-ic">🎯</div>
-      <h3>จุดแตกต่างที่ขายได้จริง</h3>
-      <p class="lead">ใบรับรอง Home Compost จริง · ไม่เหลือสารไมโครพลาสติก · Carbon Footprint ต่อใบที่วัดได้ · ความต่อเนื่องในการส่งมอบ · กลยุทธ์ Gauge Optimisation</p>
-    </div>
-    <div class="card top-amber">
-      <div class="card-ic">📦</div>
-      <h3>ปี 2569: บริหารการจัดสรรกำลังผลิต</h3>
-      <p class="lead">กำลังการผลิตในปี 2569 อยู่ระหว่างการเร่งเพิ่ม (ถุงหูหิ้ว 832 จาก 3,678 ตันเป้า) → มัดลูกค้ามาร์จินสูงไว้ก่อน + ยึดความได้เปรียบด้านสเปค เร่ง Ramp-up ปี 2570</p>
-    </div>
+    <div class="card top-green"><div class="card-ic">📑</div><h3>โครงสร้างสัญญา 3 ระดับ</h3><p class="lead">Pilot PO 1–3 เดือน → Annual Framework + Monthly Release (ผูกสูตร Resin/FX) → Co-Development (Private Label)</p></div>
+    <div class="card top-teal"><div class="card-ic">🎯</div><h3>จุดต่างที่ขายได้จริง</h3><p class="lead">ใบรับรอง Home Compost · carbon ต่อใบ · supply continuity · Gauge — ทั้งหมดเป็น "ผลลัพธ์" ไม่ใช่ "วัตถุดิบ"</p></div>
+    <div class="card top-amber"><div class="card-ic">📦</div><h3>ปี 2569 = บริหารการจัดสรร</h3><p class="lead">กำลังผลิตอยู่ระหว่างเร่งเพิ่ม (หูหิ้ว 832/3,678 ตัน) → มัดลูกค้ามาร์จินสูงก่อน + ยึด spec เร่ง ramp 2570</p></div>
   </div>
 
   <div class="dark-card reveal d2" style="margin-top:18px">
     <h3>Core Message สำหรับทีมขาย</h3>
-    <p style="font-size:1.2rem;font-weight:600;margin-top:8px;line-height:1.5">"ถุงย่อยสลายได้ที่มี<span class="hl">ใบรับรองมาตรฐานจริง</span> พร้อม<span class="hl">กำลังผลิตระดับโรงงาน</span> สำหรับธุรกิจค้าปลีกและร้านอาหารที่ต้องการเปลี่ยนบรรจุภัณฑ์อย่างปลอดภัยและต่อเนื่อง"</p>
+    <p style="font-size:1.2rem;font-weight:600;margin-top:8px;line-height:1.5">"ถุง<span class="hl">ย่อยสลายได้จริง มีใบรับรอง</span> พร้อม<span class="hl">กำลังผลิตระดับโรงงาน</span> สำหรับธุรกิจค้าปลีกและร้านอาหารที่ต้องการเปลี่ยนบรรจุภัณฑ์อย่างปลอดภัย ตอบ ESG ได้ และไม่เสี่ยงโดนปรับ"</p>
   </div>
 </section>
 
 <!-- ═══════════════ 08 · SUMMARY ═══════════════ -->
 <section class="section" id="summary">
   <div class="sec-label reveal">08 · สรุปเชิงกลยุทธ์</div>
-  <h2 class="reveal">3 ลำดับความสำคัญที่ต้องดำเนินการทันที</h2>
+  <h2 class="reveal">3 ลำดับความสำคัญที่ต้องทำทันที</h2>
   <div class="moves reveal d1">
-    <div class="move">
-      <div>
-        <h3>มัด Anchor Accounts ในเครือและนอกเครือ</h3>
-        <p class="lead">ยึดลูกค้าในเครือ (CP ALL / CP AXTRA) + คัดเลือก 6–10 รายนอกเครือที่มีมาร์จินสูงในช่วงที่กำลังผลิตยังจำกัดในปี 2569 — ใช้ทีมขายภาคสนามบุกตามลำดับพื้นที่</p>
-      </div>
-    </div>
-    <div class="move">
-      <div>
-        <h3>จัดทำ Spec × Price Matrix + กลยุทธ์ Gauge Optimisation</h3>
-        <p class="lead">จัดทำเครื่องมือสำหรับทีมขายในการนำเสนอและปิดดีล ดึงส่วนต่างราคาเข้าโซน ≤12% ที่ลูกค้าสามารถยอมรับได้ โดยใช้กลยุทธ์การปรับความหนาที่เหมาะสมกับการใช้งานของลูกค้าแต่ละราย</p>
-      </div>
-    </div>
-    <div class="move">
-      <div>
-        <h3>เตรียม Certification Package ก่อนเจรจาลูกค้ารายใหญ่</h3>
-        <p class="lead">ใบรับรอง Home Compost คาดว่าจะได้รับ ก.ค.–ก.ย. 2569 + จัดทำ Communication Guideline ป้องกัน Greenwashing Risk สำหรับลูกค้าที่จะนำ Claim ไปสื่อสารต่อ</p>
-      </div>
-    </div>
+    <div class="move"><div><h3>Reframe ทุกสื่อการขาย: "PBAT" → "ย่อยสลายได้"</h3><p class="lead">ปรับ Sales Kit, pitch, brochure ให้เปิดด้วยผลลัพธ์ (ย่อยสลายได้ + ใบรับรอง + ESG) วัตถุดิบเป็นข้อมูลสำรองไว้ตอบ</p></div></div>
+    <div class="move"><div><h3>ทำ Spec × Price Matrix + Gauge Optimisation</h3><p class="lead">เครื่องมือให้ทีมขายดึงส่วนต่างเข้าโซน ≤5–12% ที่ผลสำรวจยืนยันว่าลูกค้ายอมจ่าย</p></div></div>
+    <div class="move"><div><h3>เตรียม Certification Pack ก่อนดีลใหญ่</h3><p class="lead">ใบรับรอง Home Compost (คาด ก.ค.–ก.ย. 69) + Claim Guideline กัน Greenwashing — เป็นเกราะและจุดขายในเวลาเดียวกัน</p></div></div>
   </div>
 </section>
 
 <!-- ═══════════════ FOOTER ═══════════════ -->
 <footer>
   <div class="foot-wrap">
-    <h3 style="color:#fff;margin-bottom:6px">PBAT Market Intelligence Report 2569</h3>
-    <p style="font-size:.85rem;color:rgba(200,225,210,.7)">รายงานข่าวกรองเชิงกลยุทธ์ตลาดถุงหูหิ้ว/ถุงกระตุก PBAT ย่อยสลายได้ · C.P. Poly-Industry Co., Ltd. (CPPC) · ฝ่ายขายในประเทศ</p>
+    <h3 style="color:#fff;margin-bottom:6px">Biodegradable Bag Market Intelligence 2569</h3>
+    <p style="font-size:.85rem;color:rgba(200,225,210,.7)">รายงานข่าวกรองเชิงกลยุทธ์ตลาดถุงย่อยสลายได้ (Biodegradable/Compostable) · C.P. Poly-Industry Co., Ltd. (CPPC) · ฝ่ายขายในประเทศ</p>
 
     <div class="foot-legend" style="margin-top:20px">
       <div class="leg-item"><div class="leg-dot" style="background:#1a8040"></div> Confirmed — ข้อเท็จจริงมีแหล่งอ้างอิง</div>
@@ -1014,57 +972,54 @@ footer a { color: var(--lime); text-decoration: none; }
       <div class="foot-col">
         <h5>แหล่งข้อมูลหลัก</h5>
         <ul>
-          <li>IMARC / ChemAnalyst — ราคาเรซิน PBAT</li>
-          <li>MarketsandMarkets — ตลาด PBAT โลก (CAGR 12.8%)</li>
-          <li>ECHEMI / Renewable Carbon — กำลังผลิต PBAT จีน</li>
-          <li>ScienceDirect / UKHI — LCA Carbon Footprint</li>
-          <li>World Bank / ERIA / กรมควบคุมมลพิษ — นโยบาย EPR</li>
-          <li>TPBI · Thantawan · PTT MCC BioPBS — ข้อมูลคู่แข่ง</li>
+          <li>LH Bank — Industry Outlook ถุงพลาสติก เม.ย. 2569</li>
+          <li>Future Market Insights — ตลาดถุงย่อยสลายได้โลก</li>
+          <li>MarketsandMarkets — ตลาด PBAT โลก</li>
+          <li>McKinsey / Shorr Packaging — ผลสำรวจ WTP 2025</li>
+          <li>Lorax EPI / PackagingInsights — EPR Thailand (2570)</li>
+          <li>ScienceDirect / PMC — งานวิจัยไมโครพลาสติก PBAT 2024–25</li>
+          <li>SCGP · TPBI · Thantawan · PTT MCC — ข้อมูลคู่แข่ง</li>
           <li>เอกสารโครงการ CPPC (PPTX บริษัท มิ.ย. 2569)</li>
         </ul>
       </div>
       <div class="foot-col">
         <h5>ช่องว่างข้อมูล — ต้องเติมก่อนเจรจารายใหญ่</h5>
         <ul>
-          <li>ส่วนแบ่งตลาดรายบริษัท (กรมพัฒนาธุรกิจการค้า / DBD)</li>
-          <li>ราคาปลีก/ส่งหน้าร้านจริง ณ ปัจจุบัน</li>
-          <li>ต้นทุนจริง CPPC ต่อใบ ณ สเปคแต่ละแบบ</li>
-          <li>สถานะใบรับรอง Compostable ฉบับล่าสุด</li>
-          <li>ผลการอนุมัติ Food Contact จาก อย.</li>
+          <li>ส่วนแบ่งตลาดรายบริษัท (DBD)</li>
+          <li>ราคาปลีก/ส่งหน้าร้านจริง ต่อใบ</li>
+          <li>ต้นทุนจริง CPPC ต่อใบ ณ แต่ละสเปค</li>
+          <li>ข้อกำหนดใบรับรองที่ QSR แต่ละรายต้องการ</li>
+          <li>ผลอนุมัติ Food Contact จาก อย.</li>
         </ul>
         <h5 style="margin-top:16px">ข้อสมมติหลัก</h5>
         <ul>
-          <li>มูลค่าตลาดไทยประมาณจากสัดส่วน 3–6% ของตลาดรวม</li>
-          <li>ยอด QSR เป้าหมายอ้างอิงจากแผนธุรกิจบริษัทเท่านั้น</li>
-          <li>ราคาเรซิน PBAT ณ มิ.ย. 2568 — อาจเปลี่ยนแปลง</li>
+          <li>ยอด QSR เป้าหมายอ้างอิงแผนธุรกิจบริษัทเท่านั้น</li>
+          <li>ราคาเรซิน/ขายส่ง ณ มิ.ย. 2568 — อาจเปลี่ยนแปลง</li>
         </ul>
       </div>
     </div>
 
     <div class="foot-disclaimer">
-      <p><b style="color:rgba(200,225,210,.8)">ข้อจำกัดความรับผิดชอบ:</b> รายงานฉบับนี้จัดทำขึ้นเพื่อการใช้งานภายในองค์กร CPPC เท่านั้น ตัวเลขประมาณการและข้อมูลตลาดที่ระบุในรายงานนี้ต้องได้รับการตรวจสอบและยืนยันจากแหล่งข้อมูลอย่างเป็นทางการก่อนนำไปใช้ในการเจรจาทางธุรกิจ การสื่อสารภายนอก หรือการนำเสนอต่อผู้บริหารระดับสูงหรือนักลงทุน สถานะการรับรองมาตรฐานอ้างอิงตาม ณ มิถุนายน 2569 เท่านั้น</p>
+      <p><b style="color:rgba(200,225,210,.8)">ข้อจำกัดความรับผิดชอบ:</b> รายงานนี้จัดทำเพื่อใช้งานภายในองค์กร CPPC เท่านั้น ตัวเลขประมาณการและข้อมูลตลาดต้องได้รับการตรวจสอบก่อนนำไปใช้เจรจาธุรกิจหรือสื่อสารภายนอก การสื่อสารคุณสมบัติการย่อยสลายและการรับรองมาตรฐานต้องอ้างอิงเอกสาร/ใบรับรองฉบับล่าสุด และระบุเงื่อนไขการกำจัดเสมอ สถานะการรับรอง ณ มิถุนายน 2569</p>
     </div>
 
     <div class="foot-meta">
       <span>© 2569 บริษัท ซี.พี. สหอุตสาหกรรม จำกัด (CPPC) · ฝ่ายขายในประเทศ</span>
-      <span>จัดทำ: มิถุนายน 2569 · ฉบับใช้งานภายในองค์กร · ห้ามเผยแพร่ภายนอก</span>
+      <span>จัดทำ: มิถุนายน 2569 · ฉบับ Reframe (ย่อยสลายได้) · ใช้ภายในองค์กร</span>
     </div>
   </div>
 </footer>
 
 <script>
-// ── Progress bar ──────────────────────────────────
 const prog = document.getElementById('progress');
 window.addEventListener('scroll', () => {
   const h = document.documentElement;
   prog.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%';
 }, { passive: true });
 
-// ── Nav shadow + active link ──────────────────────
 const navEl = document.getElementById('nav');
 const sections = document.querySelectorAll('section[id], div[id="hero"]');
 const navLinks = document.querySelectorAll('.nav-links a');
-
 window.addEventListener('scroll', () => {
   navEl.classList.toggle('scrolled', window.scrollY > 40);
   let cur = '';
@@ -1072,24 +1027,24 @@ window.addEventListener('scroll', () => {
   navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
 }, { passive: true });
 
-// ── Count-up animation ────────────────────────────
 function runCount(el) {
   if (el._done) return; el._done = true;
   const target = parseFloat(el.dataset.target);
+  const prefix = el.dataset.prefix || '';
   const isDecimal = target % 1 !== 0;
   const dur = 1300, start = performance.now();
   function step(now) {
     let p = Math.min((now - start) / dur, 1);
     p = 1 - Math.pow(1 - p, 3);
     const v = target * p;
-    el.textContent = isDecimal ? v.toFixed(1) : Math.round(v).toLocaleString('en-US');
+    const shown = isDecimal ? v.toFixed(1) : Math.round(v).toLocaleString('en-US');
+    el.textContent = prefix + shown;
     if (p < 1) requestAnimationFrame(step);
-    else el.textContent = isDecimal ? target.toFixed(1) : target.toLocaleString('en-US');
+    else el.textContent = prefix + (isDecimal ? target.toFixed(1) : target.toLocaleString('en-US'));
   }
   requestAnimationFrame(step);
 }
 
-// ── Intersection Observer — reveals + counters + gauge bars ──
 const io = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (!e.isIntersecting) return;
@@ -1099,71 +1054,41 @@ const io = new IntersectionObserver((entries) => {
     io.unobserve(e.target);
   });
 }, { threshold: 0.1 });
-
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-// Also fire counters in hero panel on load (already visible)
 window.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.hero-panel .count').forEach(c => setTimeout(() => runCount(c), 500));
-  // fire gauge fills that might be visible
   document.querySelectorAll('.fill').forEach(f => {
     const rect = f.getBoundingClientRect();
     if (rect.top < window.innerHeight) f.style.width = f.dataset.w;
   });
 });
 
-// ── Chart.js defaults ─────────────────────────────
 Chart.defaults.font.family = "'Sarabun', sans-serif";
 Chart.defaults.font.size = 14;
 Chart.defaults.color = '#374239';
 const C = { green: '#2a6e48', lime: '#74b52e', teal: '#1a8a7e', amber: '#c87020', coral: '#c84530', dark: '#0d3120' };
 const drawn = {};
-
 function onVisible(id, fn) {
   const el = document.getElementById(id);
   if (!el) return;
   const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting && !drawn[id]) { drawn[id] = 1; fn(); obs.unobserve(el); }
-    });
+    entries.forEach(e => { if (e.isIntersecting && !drawn[id]) { drawn[id] = 1; fn(); obs.unobserve(el); } });
   }, { threshold: 0.2 });
   obs.observe(el);
 }
 
-// Spec chart
-onVisible('specChart', () => new Chart(document.getElementById('specChart'), {
-  type: 'bar',
-  data: {
-    labels: ['ความแข็งแรงดึง', 'อัตราการยืด', 'น้ำหนัก (เทียบ PE)'],
-    datasets: [{
-      label: 'PBAT vs PE (%)',
-      data: [-12, -4, 25],
-      backgroundColor: [C.green, C.green, C.amber],
-      borderRadius: 7, barThickness: 44
-    }]
-  },
-  options: {
-    plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => (c.raw > 0 ? '+' : '') + c.raw + '% เทียบ PE' } } },
-    scales: {
-      y: { grid: { color: 'rgba(20,60,35,.07)' }, ticks: { callback: v => v + '%' } },
-      x: { grid: { display: false } }
-    }
-  }
-}));
-
-// Global PBAT market
 onVisible('globalChart', () => new Chart(document.getElementById('globalChart'), {
   type: 'line',
   data: {
-    labels: ['2568', '2569', '2570', '2571', '2572', '2573'],
+    labels: ['2569', '2571', '2573', '2575', '2577', '2579'],
     datasets: [{
-      label: 'ตลาด PBAT โลก (พันล้าน USD)',
-      data: [1.51, 1.70, 1.92, 2.17, 2.45, 2.76],
+      label: 'ตลาดถุงย่อยสลายได้โลก (พันล้าน USD)',
+      data: [0.394, 0.47, 0.56, 0.65, 0.73, 0.813],
       borderColor: C.teal,
       backgroundColor: (ctx) => {
         const g = ctx.chart.ctx.createLinearGradient(0, 0, 0, 280);
-        g.addColorStop(0, 'rgba(26,138,126,.32)');
-        g.addColorStop(1, 'rgba(26,138,126,0)');
+        g.addColorStop(0, 'rgba(26,138,126,.32)'); g.addColorStop(1, 'rgba(26,138,126,0)');
         return g;
       },
       fill: true, tension: 0.4, borderWidth: 2.5,
@@ -1171,15 +1096,11 @@ onVisible('globalChart', () => new Chart(document.getElementById('globalChart'),
     }]
   },
   options: {
-    plugins: { legend: { display: false } },
-    scales: {
-      y: { grid: { color: 'rgba(20,60,35,.07)' }, ticks: { callback: v => '$' + v.toFixed(1) + 'B' } },
-      x: { grid: { display: false } }
-    }
+    plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => '$' + c.raw.toFixed(2) + 'B' } } },
+    scales: { y: { grid: { color: 'rgba(20,60,35,.07)' }, ticks: { callback: v => '$' + v.toFixed(1) + 'B' } }, x: { grid: { display: false } } }
   }
 }));
 
-// Capacity chart
 onVisible('capacityChart', () => new Chart(document.getElementById('capacityChart'), {
   type: 'bar',
   data: {
@@ -1191,32 +1112,20 @@ onVisible('capacityChart', () => new Chart(document.getElementById('capacityChar
   },
   options: {
     plugins: { legend: { position: 'bottom' }, tooltip: { callbacks: { label: c => c.dataset.label + ': ' + c.raw.toLocaleString() + ' ตัน' } } },
-    scales: {
-      y: { stacked: true, grid: { color: 'rgba(20,60,35,.07)' }, ticks: { callback: v => (v / 1000) + 'k' } },
-      x: { stacked: true, grid: { display: false } }
-    }
+    scales: { y: { stacked: true, grid: { color: 'rgba(20,60,35,.07)' }, ticks: { callback: v => (v / 1000) + 'k' } }, x: { stacked: true, grid: { display: false } } }
   }
 }));
 
-// Carbon chart
 onVisible('carbonChart', () => new Chart(document.getElementById('carbonChart'), {
   type: 'bar',
   data: {
     labels: ['Bio-PBAT', 'PBAT', 'PE (LDPE)', 'HDPE'],
-    datasets: [{
-      label: 'kg CO₂e/กก.',
-      data: [1.0, 2.4, 2.1, 6.7],
-      backgroundColor: [C.lime, C.green, C.amber, C.coral],
-      borderRadius: 7, barThickness: 50
-    }]
+    datasets: [{ label: 'kg CO₂e/กก.', data: [1.0, 2.4, 2.1, 6.7], backgroundColor: [C.lime, C.green, C.amber, C.coral], borderRadius: 7, barThickness: 50 }]
   },
   options: {
     indexAxis: 'y',
     plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => c.raw + ' kg CO₂e/กก.' } } },
-    scales: {
-      x: { grid: { color: 'rgba(20,60,35,.07)' }, ticks: { callback: v => v } },
-      y: { grid: { display: false } }
-    }
+    scales: { x: { grid: { color: 'rgba(20,60,35,.07)' }, ticks: { callback: v => v } }, y: { grid: { display: false } } }
   }
 }));
 </script>
