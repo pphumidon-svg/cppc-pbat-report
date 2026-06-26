@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Price Reference Card — ราคาต่อใบ ถุงย่อยสลายได้ | CPPC Field Sales</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest-dark:#0d3120; --forest:#1a5038; --forest-mid:#2a6e48;
+  --lime:#74b52e; --lime-soft:rgba(116,181,46,.14);
+  --teal:#1a8a7e; --amber:#c87020; --amber-soft:rgba(200,112,32,.13);
+  --coral:#c84530; --coral-soft:rgba(200,69,48,.08);
+  --cream:#eef1ea; --card:#fff; --ink:#181e1a; --ink-mid:#374239;
+  --muted:#6a7b6d; --border:rgba(20,60,35,.14);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Sarabun',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased;padding:24px 12px 60px}
+
+.toolbar{max-width:210mm;margin:0 auto 18px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.toolbar .t-title{font-weight:700;color:var(--forest-dark);font-size:1rem}
+.toolbar .t-title small{display:block;font-weight:400;color:var(--muted);font-size:.8rem}
+.btn-print{background:var(--forest-dark);color:#fff;border:none;padding:11px 22px;border-radius:9px;font-family:'Sarabun';font-weight:600;font-size:.9rem;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:.2s}
+.btn-print:hover{background:var(--forest)}
+
+.page{width:210mm;min-height:297mm;background:var(--card);margin:0 auto 20px;padding:13mm 14mm;box-shadow:0 12px 40px -16px rgba(8,28,18,.35);position:relative}
+
+.ph{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:2.5px solid var(--forest-dark);padding-bottom:9px;margin-bottom:13px}
+.ph .brand{font-weight:800;font-size:1.18rem;color:var(--forest-dark);line-height:1.1}
+.ph .brand .g{color:var(--forest-mid)}
+.ph .brand small{display:block;font-weight:500;font-size:.72rem;color:var(--muted);letter-spacing:.04em;margin-top:2px}
+.ph .meta{text-align:right;font-size:.68rem;color:var(--muted);line-height:1.5}
+.ph .meta b{color:var(--forest);display:block;font-size:.74rem}
+
+.blk{margin-bottom:13px}
+.blk-h{display:flex;align-items:center;gap:8px;font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--forest-mid);margin-bottom:8px}
+.blk-h .n{background:var(--forest-dark);color:#fff;width:19px;height:19px;border-radius:5px;display:grid;place-items:center;font-size:.66rem;flex-shrink:0}
+.blk-h .line{flex:1;height:1px;background:var(--border)}
+
+/* price table */
+.ptable{width:100%;border-collapse:collapse;font-size:.78rem}
+.ptable th,.ptable td{padding:8px 9px;text-align:center;border-bottom:1px solid var(--border)}
+.ptable thead th{background:var(--forest-dark);color:#eafff2;font-weight:700;font-size:.7rem;letter-spacing:.02em;line-height:1.25}
+.ptable thead th.cppc{background:#091c10;color:var(--lime)}
+.ptable td.size{text-align:left;font-weight:700;color:var(--forest-dark)}
+.ptable td.size small{display:block;font-weight:400;color:var(--muted);font-size:.68rem}
+.ptable td.wt{color:var(--muted);font-size:.74rem}
+.ptable td.pe{color:var(--ink-mid)}
+.ptable td.cheap{color:var(--ink-mid)}
+.ptable td.cert{font-weight:600;color:var(--forest)}
+.ptable td.diff{font-weight:700;color:var(--amber)}
+.ptable td.cppc{background:var(--lime-soft);border-left:2px dashed rgba(116,181,46,.4);border-right:2px dashed rgba(116,181,46,.4)}
+.ptable tbody tr:hover td{background:rgba(26,80,56,.03)}
+.ptable tbody tr:hover td.cppc{background:var(--lime-soft)}
+.ptable tfoot td{font-size:.7rem;color:var(--muted);text-align:left;padding-top:8px;border-bottom:none}
+
+/* highlight insight */
+.hl-box{background:linear-gradient(150deg,var(--forest-dark),#0a2018);color:#eafff2;border-radius:11px;padding:14px 18px;position:relative;overflow:hidden;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.hl-box::before{content:'';position:absolute;width:130px;height:130px;border-radius:50%;top:-55px;right:-35px;background:radial-gradient(circle,rgba(116,181,46,.3),transparent 65%)}
+.hl-big{font-size:1.7rem;font-weight:800;color:var(--lime);line-height:1;position:relative;flex-shrink:0}
+.hl-box p{font-size:.86rem;line-height:1.5;position:relative}
+.hl-box .em{color:var(--lime);font-weight:700}
+
+/* formula + script two col */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fbox{border:1px solid var(--border);border-radius:9px;padding:13px 15px;background:#fafcf7}
+.fbox h4{font-size:.82rem;color:var(--forest-dark);margin-bottom:7px}
+.formula{background:var(--card);border:1px dashed var(--border-med,rgba(20,60,35,.22));border-radius:7px;padding:10px 12px;font-size:.82rem;color:var(--forest);text-align:center;font-weight:600;margin-bottom:6px}
+.fbox p{font-size:.74rem;color:var(--ink-mid);line-height:1.45}
+.fbox .ex{font-size:.72rem;color:var(--muted);margin-top:5px}
+
+.say-line{font-size:.8rem;line-height:1.4;padding:5px 0;border-bottom:1px dashed var(--border);color:var(--forest);font-weight:500}
+.say-line:last-child{border-bottom:none}
+.say-line::before{content:'“';color:var(--lime);font-weight:800;margin-right:3px}
+
+.legend{display:flex;gap:14px;flex-wrap:wrap;margin-top:6px}
+.lg{display:flex;align-items:center;gap:5px;font-size:.68rem;color:var(--muted)}
+.lg b{color:var(--forest-dark)}
+
+.pg-foot{position:absolute;bottom:7mm;left:14mm;right:14mm;display:flex;justify-content:space-between;font-size:.62rem;color:var(--muted);border-top:1px solid var(--border);padding-top:5px}
+
+@page{size:A4;margin:0}
+@media print{
+  body{background:#fff;padding:0}
+  .toolbar{display:none}
+  .page{box-shadow:none;margin:0;width:auto;min-height:auto;page-break-after:always;padding:11mm 12mm}
+  .page:last-child{page-break-after:auto}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+@media(max-width:780px){
+  .page{width:100%;padding:18px 14px;min-height:auto}
+  .two{grid-template-columns:1fr}
+  .ptable{font-size:.72rem}
+  .ptable th,.ptable td{padding:6px 5px}
+}
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="t-title">Price Reference Card — ราคาต่อใบ<small>เครื่องมือทีมขายภาคสนาม · พิมพ์ A4 พกหน้างาน</small></div>
+  <button class="btn-print" onclick="window.print()">🖨️ พิมพ์ / บันทึก PDF</button>
+</div>
+
+<div class="page">
+  <div class="ph">
+    <div class="brand">CPPC · ราคาต่อใบ ถุง<span class="g">ย่อยสลายได้</span><small>FIELD SALES REFERENCE · เสนอเป็นบาท/ใบ ไม่ใช่บาท/กก.</small></div>
+    <div class="meta"><b>เทียบ PE vs ย่อยสลาย vs Compostable</b>มิ.ย. 2569 · ใช้ภายใน<br>ทีม: ณัฐนันท์ · ธฤต · เนติพงษ์</div>
+  </div>
+
+  <!-- 1. main price table -->
+  <div class="blk">
+    <div class="blk-h"><span class="n">1</span> ตารางราคาต่อใบ แยกขนาด (ขายส่ง B2B) <span class="line"></span></div>
+    <table class="ptable">
+      <thead>
+        <tr>
+          <th style="text-align:left">ประเภท / ขนาด</th>
+          <th>น้ำหนัก/ใบ<br>(ประมาณ)</th>
+          <th>PE ทั่วไป<br>45 ฿/กก.</th>
+          <th>ย่อยสลาย<br>เกรดประหยัด</th>
+          <th>Compostable<br>มีเซอร์ ~75 ฿/กก.</th>
+          <th>ส่วนต่าง/ใบ<br>(vs PE)</th>
+          <th class="cppc">CPPC จริง<br>(กรอกเอง)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="size">ถุงหูหิ้วเล็ก<small>6×14 นิ้ว</small></td>
+          <td class="wt">~3 ก.</td>
+          <td class="pe">0.14 ฿</td>
+          <td class="cheap">~0.29 ฿</td>
+          <td class="cert">0.23 ฿</td>
+          <td class="diff">+0.09 ฿</td>
+          <td class="cppc">⬜</td>
+        </tr>
+        <tr>
+          <td class="size">ถุงหูหิ้วกลาง<small>8×16 นิ้ว</small></td>
+          <td class="wt">~5 ก.</td>
+          <td class="pe">0.23 ฿</td>
+          <td class="cheap">~0.45 ฿</td>
+          <td class="cert">0.38 ฿</td>
+          <td class="diff">+0.15 ฿</td>
+          <td class="cppc">⬜</td>
+        </tr>
+        <tr>
+          <td class="size">ถุงหูหิ้วใหญ่<small>12×20 นิ้ว</small></td>
+          <td class="wt">~9 ก.</td>
+          <td class="pe">0.41 ฿</td>
+          <td class="cheap">~0.80 ฿</td>
+          <td class="cert">0.68 ฿</td>
+          <td class="diff">+0.27 ฿</td>
+          <td class="cppc">⬜</td>
+        </tr>
+        <tr>
+          <td class="size">ถุงกระตุก<small>ม้วน · ต่อใบ</small></td>
+          <td class="wt">~2 ก.</td>
+          <td class="pe">0.09 ฿</td>
+          <td class="cheap">~0.18 ฿</td>
+          <td class="cert">0.15 ฿</td>
+          <td class="diff">+0.06 ฿</td>
+          <td class="cppc">⬜</td>
+        </tr>
+        <tr>
+          <td class="size">ถุงขยะกลาง<small>18×20 นิ้ว</small></td>
+          <td class="wt">~8 ก.</td>
+          <td class="pe">0.36 ฿</td>
+          <td class="cheap">~0.70 ฿</td>
+          <td class="cert">0.60 ฿</td>
+          <td class="diff">+0.24 ฿</td>
+          <td class="cppc">⬜</td>
+        </tr>
+        <tr>
+          <td class="size">ถุงขยะใหญ่<small>30×40 นิ้ว</small></td>
+          <td class="wt">~25 ก.</td>
+          <td class="pe">1.13 ฿</td>
+          <td class="cheap">~2.20 ฿</td>
+          <td class="cert">1.88 ฿</td>
+          <td class="diff">+0.75 ฿</td>
+          <td class="cppc">⬜</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr><td colspan="7">น้ำหนัก/ใบ และราคา PE/Compostable = ประมาณการเพื่อการเทียบ (คำนวณจากบาท/กก. × น้ำหนัก) · ราคาย่อยสลายเกรดประหยัด = ราคา retail ปลีกที่พบจริง · ปรับตามต้นทุน/น้ำหนัก/ความหนาจริงของแต่ละสเปค</td></tr>
+      </tfoot>
+    </table>
+    <div class="legend">
+      <span class="lg"><b>PE ทั่วไป</b> = baseline (กรมการค้าภายใน 45 ฿/กก.)</span>
+      <span class="lg"><b>ย่อยสลายเกรดประหยัด</b> = degradable-claim ปลีก</span>
+      <span class="lg"><b>Compostable</b> = มีใบรับรอง (จุดยืน CPPC)</span>
+    </div>
+  </div>
+
+  <!-- 2. key insight -->
+  <div class="blk">
+    <div class="blk-h"><span class="n">2</span> คันโยกปิดการขาย <span class="line"></span></div>
+    <div class="hl-box">
+      <div class="hl-big">+0.09<br><span style="font-size:.7rem;color:#a8ccb2">บาท/ใบ</span></div>
+      <p>ถุงหูหิ้วเล็ก compostable มีเซอร์ แพงกว่า PE แค่ <span class="em">9 สตางค์/ใบ</span> — แม้คิดเป็น % จะดูเยอะ แต่ <span class="em">ต่อใบคือหลักสตางค์</span> เมื่อเทียบกับค่าปรับสูงสุด 100,000 บาท + EPR 1.2–1.5 ฿/แพ็ค ที่กำลังมา → <span class="em">เสนอเป็นบาท/ใบเสมอ อย่าเสนอเป็นบาท/กก.</span></p>
+    </div>
+  </div>
+
+  <!-- 3. formula + script -->
+  <div class="blk">
+    <div class="blk-h"><span class="n">3</span> สูตรแปลง + สคริปต์พูดเรื่องราคา <span class="line"></span></div>
+    <div class="two">
+      <div class="fbox">
+        <h4>🧮 แปลง บาท/กก. → บาท/ใบ</h4>
+        <div class="formula">ราคา/ใบ = (ราคา ฿/กก.) × (น้ำหนัก/ใบ เป็น กก.)</div>
+        <p class="ex">ตัวอย่าง: ถุงหูหิ้ว 5 กรัม ที่ 75 ฿/กก.<br>= 75 × 0.005 = <b>0.38 บาท/ใบ</b></p>
+        <p style="margin-top:7px"><b>คันโยก Gauge:</b> ลดความหนา 15→10 ไมครอน = น้ำหนัก/ใบ ลดลง ~1 ใน 3 → ส่วนต่างต่อใบยิ่งแคบลงอีก</p>
+      </div>
+      <div class="fbox">
+        <h4>🗣️ พูดเรื่องราคาแบบนี้</h4>
+        <div class="say-line">ส่วนต่างแค่หลักสตางค์ต่อใบ ไม่ใช่หลักสิบบาทต่อกิโล</div>
+        <div class="say-line">เทียบกับค่าปรับแสนนึง กับ EPR ที่กำลังมา คุ้มกว่าเยอะครับ</div>
+        <div class="say-line">ผมขอส่งตัวอย่างให้ลองเทียบต่อใบ กับของเดิมเลยครับ</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- legend -->
+  <div class="blk" style="margin-bottom:0">
+    <div class="legend">
+      <span class="lg">🟢 = ราคาจริงยืนยันแล้ว (PE baseline, retail ปลีก)</span>
+      <span class="lg">🟡 = ประมาณการจากน้ำหนัก × ราคา/กก.</span>
+      <span class="lg">⬜ = ช่องกรอกราคาจริง CPPC (รอต้นทุนจริง)</span>
+    </div>
+  </div>
+
+  <div class="pg-foot"><span>⚠️ ราคาเป็นค่าอ้างอิงเพื่อการเทียบ · ราคา CPPC จริงรอต้นทุนต่อสเปค · ที่มา: กรมการค้าภายใน, ChemAnalyst, Advance Bio, HemcBags/Hytrend</span><span>CPPC Field Sales</span></div>
+</div>
+
+</body>
+</html>
