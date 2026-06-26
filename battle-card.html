@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Battle Card — ถุงย่อยสลายได้ | CPPC Field Sales</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest-dark:#0d3120; --forest:#1a5038; --forest-mid:#2a6e48;
+  --sage:#4e7b62; --lime:#74b52e; --lime-soft:rgba(116,181,46,.14);
+  --teal:#1a8a7e; --amber:#c87020; --amber-soft:rgba(200,112,32,.13);
+  --coral:#c84530; --coral-soft:rgba(200,69,48,.08);
+  --cream:#eef1ea; --card:#fff; --ink:#181e1a; --ink-mid:#374239;
+  --muted:#6a7b6d; --border:rgba(20,60,35,.14);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Sarabun',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased;padding:24px 12px 60px}
+
+/* ── Toolbar (screen only) ── */
+.toolbar{max-width:210mm;margin:0 auto 18px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.toolbar .t-title{font-weight:700;color:var(--forest-dark);font-size:1rem}
+.toolbar .t-title small{display:block;font-weight:400;color:var(--muted);font-size:.8rem}
+.btn-print{background:var(--forest-dark);color:#fff;border:none;padding:11px 22px;border-radius:9px;font-family:'Sarabun';font-weight:600;font-size:.9rem;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:.2s}
+.btn-print:hover{background:var(--forest)}
+
+/* ── A4 page ── */
+.page{width:210mm;min-height:297mm;background:var(--card);margin:0 auto 20px;padding:13mm 14mm;box-shadow:0 12px 40px -16px rgba(8,28,18,.35);position:relative}
+
+/* ── Page header ── */
+.ph{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:2.5px solid var(--forest-dark);padding-bottom:9px;margin-bottom:13px}
+.ph .brand{font-weight:800;font-size:1.18rem;color:var(--forest-dark);line-height:1.1}
+.ph .brand .g{color:var(--forest-mid)}
+.ph .brand small{display:block;font-weight:500;font-size:.72rem;color:var(--muted);letter-spacing:.04em;margin-top:2px}
+.ph .meta{text-align:right;font-size:.68rem;color:var(--muted);line-height:1.5}
+.ph .meta b{color:var(--forest);display:block;font-size:.74rem}
+
+/* ── Block ── */
+.blk{margin-bottom:12px}
+.blk-h{display:flex;align-items:center;gap:8px;font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--forest-mid);margin-bottom:7px}
+.blk-h .n{background:var(--forest-dark);color:#fff;width:19px;height:19px;border-radius:5px;display:grid;place-items:center;font-size:.66rem;flex-shrink:0}
+.blk-h .line{flex:1;height:1px;background:var(--border)}
+
+/* ── Opening pitch ── */
+.pitch{background:linear-gradient(150deg,var(--forest-dark),#0a2018);color:#eafff2;border-radius:11px;padding:15px 18px;position:relative;overflow:hidden}
+.pitch::before{content:'';position:absolute;width:140px;height:140px;border-radius:50%;top:-60px;right:-40px;background:radial-gradient(circle,rgba(116,181,46,.3),transparent 65%)}
+.pitch .lbl{font-size:.64rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--lime);margin-bottom:5px;position:relative}
+.pitch p{font-size:.92rem;line-height:1.55;position:relative}
+.pitch .em{color:var(--lime);font-weight:600}
+
+/* ── Outcomes ── */
+.outcomes{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px}
+.oc{border:1px solid var(--border);border-top:3px solid var(--forest-mid);border-radius:9px;padding:11px 12px}
+.oc .n{font-size:.6rem;font-weight:800;color:var(--lime);letter-spacing:.08em}
+.oc h4{font-size:.85rem;color:var(--forest-dark);margin:2px 0 4px;line-height:1.2}
+.oc p{font-size:.72rem;color:var(--ink-mid);line-height:1.4}
+
+/* ── Say / Don't ── */
+.say{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.say-col{border-radius:9px;padding:11px 13px;border:1px solid var(--border)}
+.say-col.no{background:var(--coral-soft);border-color:rgba(200,69,48,.25)}
+.say-col.yes{background:var(--lime-soft);border-color:rgba(116,181,46,.32)}
+.say-col h4{font-size:.78rem;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.say-col.no h4{color:#8a2a14}
+.say-col.yes h4{color:var(--forest-dark)}
+.say-line{font-size:.74rem;line-height:1.38;padding:3.5px 0;border-bottom:1px dashed var(--border)}
+.say-line:last-child{border-bottom:none}
+.say-col.no .say-line{color:#6e3a2a}
+.say-col.yes .say-line{color:var(--forest);font-weight:500}
+
+/* ── Proof chips ── */
+.proof{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.pf{background:var(--forest-dark);color:#eafff2;border-radius:9px;padding:10px 11px;text-align:center}
+.pf .v{font-size:1.18rem;font-weight:800;color:#fff;line-height:1}
+.pf .v small{font-size:.6rem;color:var(--lime);font-weight:600}
+.pf .k{font-size:.62rem;color:#a8ccb2;margin-top:4px;line-height:1.3}
+
+/* ── Objection / Q-A rows ── */
+.qa{border:1px solid var(--border);border-radius:9px;overflow:hidden}
+.qa-row{display:grid;grid-template-columns:1fr 1.35fr;border-bottom:1px solid var(--border)}
+.qa-row:last-child{border-bottom:none}
+.qa-q{background:var(--coral-soft);padding:9px 12px;font-size:.76rem;font-weight:600;color:#7a2a18;border-right:1px solid var(--border);display:flex;align-items:center;gap:6px}
+.qa-q::before{content:'“';font-size:1.1rem;color:var(--coral);line-height:0}
+.qa-a{padding:9px 12px;font-size:.75rem;color:var(--ink-mid);line-height:1.42}
+.qa-a b{color:var(--forest-dark)}
+
+/* ── Competitor counter ── */
+.cc{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.cc-item{border:1px solid var(--border);border-left:3px solid var(--teal);border-radius:7px;padding:8px 11px}
+.cc-item .who{font-size:.76rem;font-weight:700;color:var(--forest-dark)}
+.cc-item .say{font-size:.71rem;color:var(--ink-mid);line-height:1.38;margin-top:2px}
+
+/* ── Price ladder ── */
+.ladder{display:flex;flex-direction:column;gap:6px}
+.lad{display:flex;align-items:center;gap:10px}
+.lad .bar{height:11px;border-radius:99px;flex-shrink:0}
+.lad .txt{font-size:.73rem;color:var(--ink-mid)}
+.lad .txt b{color:var(--forest-dark)}
+
+/* ── Two col ── */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
+/* ── Close steps ── */
+.steps{display:flex;gap:8px;counter-reset:s}
+.step{flex:1;background:var(--lime-soft);border:1px solid rgba(116,181,46,.3);border-radius:8px;padding:9px 10px;position:relative}
+.step .sn{counter-increment:s;font-size:.64rem;font-weight:800;color:var(--forest-mid)}
+.step .sn::before{content:'STEP ' counter(s)}
+.step p{font-size:.72rem;color:var(--forest-dark);line-height:1.35;margin-top:2px;font-weight:500}
+
+/* ── DMU / target tags ── */
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:5px}
+.tag{font-size:.68rem;background:rgba(26,80,56,.06);border:1px solid var(--border);padding:3px 8px;border-radius:5px;color:var(--forest-dark);font-weight:500}
+.tag.hot{background:var(--amber-soft);border-color:rgba(200,112,32,.3);color:#8a5210}
+
+/* ── small note ── */
+.fine{font-size:.66rem;color:var(--muted);line-height:1.4;margin-top:7px;font-style:italic}
+.pg-foot{position:absolute;bottom:7mm;left:14mm;right:14mm;display:flex;justify-content:space-between;font-size:.62rem;color:var(--muted);border-top:1px solid var(--border);padding-top:5px}
+
+/* ── PRINT ── */
+@page{size:A4;margin:0}
+@media print{
+  body{background:#fff;padding:0}
+  .toolbar{display:none}
+  .page{box-shadow:none;margin:0;width:auto;min-height:auto;page-break-after:always;padding:11mm 12mm}
+  .page:last-child{page-break-after:auto}
+  .pitch,.pf{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+@media(max-width:780px){
+  .page{width:100%;padding:18px 16px;min-height:auto}
+  .outcomes,.proof{grid-template-columns:1fr 1fr}
+  .say,.cc,.two{grid-template-columns:1fr}
+  .qa-row{grid-template-columns:1fr}
+  .qa-q{border-right:none;border-bottom:1px solid var(--border)}
+  .steps{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="t-title">Battle Card — ถุงย่อยสลายได้<small>เครื่องมือทีมขายภาคสนาม · พิมพ์ A4 2 หน้า พกหน้างาน</small></div>
+  <button class="btn-print" onclick="window.print()">🖨️ พิมพ์ / บันทึก PDF</button>
+</div>
+
+<!-- ═══════════ PAGE 1 ═══════════ -->
+<div class="page">
+  <div class="ph">
+    <div class="brand">CPPC · ถุง<span class="g">ย่อยสลายได้</span> Battle Card<small>FIELD SALES · ขาย "ผลลัพธ์" ไม่ใช่ "วัตถุดิบ"</small></div>
+    <div class="meta"><b>หน้า 1 / 2 — เปิดการขาย</b>ทีม: ณัฐนันท์ · ธฤต · เนติพงษ์<br>มิ.ย. 2569 · ใช้ภายใน</div>
+  </div>
+
+  <!-- 1. Opening pitch -->
+  <div class="blk">
+    <div class="blk-h"><span class="n">1</span> ประโยคเปิด 30 วินาที (พูดได้เลย) <span class="line"></span></div>
+    <div class="pitch">
+      <div class="lbl">Opening Script</div>
+      <p>"ตอนนี้กฎหมายแบนถุงทั่วไปเริ่มแล้ว <span class="em">ปรับสูงสุดแสนนึง</span> และปี 70 จะมี EPR เก็บค่าธรรมเนียมถุงเกือบทุกใบ — CPPC มี<span class="em">ถุงย่อยสลายได้จริง มีใบรับรอง</span> ผลิตในเครือ CP ส่งได้ต่อเนื่องทุกภาค อยากให้ทีมจัดซื้อ/Sustainability ของพี่ได้ลองเทียบสเปคกับถุงเดิมดูครับ"</p>
+    </div>
+  </div>
+
+  <!-- 2. Outcomes -->
+  <div class="blk">
+    <div class="blk-h"><span class="n">2</span> 3 ผลลัพธ์ที่ลูกค้าซื้อ (เปิดด้วยอันนี้) <span class="line"></span></div>
+    <div class="outcomes">
+      <div class="oc"><div class="n">ผลลัพธ์ 01</div><h4>ย่อยสลายได้จริง + ใบรับรอง</h4><p>Home 12 ด. · Industrial 6 ด. · มาตรฐาน EN 13432 / มอก.17088 — ใบรับรอง = ตัวตัดสินใจของฝ่ายจัดซื้อ</p></div>
+      <div class="oc"><div class="n">ผลลัพธ์ 02</div><h4>ไม่ทิ้งไมโครพลาสติก*</h4><p>ย่อยสมบูรณ์เป็น CO₂/น้ำ/ชีวมวล <b>*ภายใต้สภาวะ compost ที่กำหนด</b> — พูดคู่กับใบรับรองเสมอ</p></div>
+      <div class="oc"><div class="n">ผลลัพธ์ 03</div><h4>Carbon ต่ำกว่า PE</h4><p>ต่ำกว่า ~20–50% (LCA) → ลูกค้าเอาไปใช้รายงาน ESG / Scope 3 ได้จริง</p></div>
+    </div>
+  </div>
+
+  <!-- 3. Say / Don't -->
+  <div class="blk">
+    <div class="blk-h"><span class="n">3</span> ภาษาที่ใช้ — พูด vs ไม่พูด <span class="line"></span></div>
+    <div class="say">
+      <div class="say-col no">
+        <h4>✕ อย่าเปิดด้วยวัตถุดิบ</h4>
+        <div class="say-line">"ถุงเราทำจาก PBAT"</div>
+        <div class="say-line">"PBAT คือ BDO + AA + PTA"</div>
+        <div class="say-line">"ผสม PBAT + PBS สัดส่วน X%"</div>
+        <div class="say-line">"ไม่มีไมโครพลาสติก 100% ทิ้งที่ไหนก็ย่อย"</div>
+      </div>
+      <div class="say-col yes">
+        <h4>✓ เปิดด้วยผลลัพธ์</h4>
+        <div class="say-line">"ย่อยสลายได้จริง มีใบรับรองสากล"</div>
+        <div class="say-line">"ผ่าน EN 13432 / มอก.17088"</div>
+        <div class="say-line">"พร้อมเอกสาร Carbon/Scope 3 ให้ฝ่าย ESG"</div>
+        <div class="say-line">"ย่อยสมบูรณ์เมื่อ compost ตามเงื่อนไข + มี Test Report"</div>
+      </div>
+    </div>
+    <p class="fine">วัตถุดิบ (PBAT+PBS) = รู้ไว้ตอบเมื่อถูกถาม ไม่ใช่หัวข้อเปิด — ดูคำตอบหน้า 2</p>
+  </div>
+
+  <!-- 4. Proof points -->
+  <div class="blk">
+    <div class="blk-h"><span class="n">4</span> ตัวเลขพกไว้ตอบ (Proof Points) <span class="line"></span></div>
+    <div class="proof">
+      <div class="pf"><div class="v">80<small>%</small></div><div class="k">ผู้บริโภคยอมจ่ายเพิ่ม 3–5% เพื่อ compostable</div></div>
+      <div class="pf"><div class="v">100K<small>฿</small></div><div class="k">โทษปรับถุงต้องห้าม (กฎ ม.ค. 2568)</div></div>
+      <div class="pf"><div class="v">1.2–1.5<small>฿/แพ็ค</small></div><div class="k">ค่าธรรมเนียม EPR ที่จะเพิ่มต้นทุนถุงทั่วไป (2570)</div></div>
+      <div class="pf"><div class="v">−2.7%<small> vs +12.8%</small></div><div class="k">ถุงทั่วไปหด · ถุงย่อยสลายโต</div></div>
+    </div>
+  </div>
+
+  <div class="pg-foot"><span>CPPC Field Sales Battle Card · ถุงย่อยสลายได้</span><span>หน้า 1 / 2</span></div>
+</div>
+
+<!-- ═══════════ PAGE 2 ═══════════ -->
+<div class="page">
+  <div class="ph">
+    <div class="brand">CPPC · ถุง<span class="g">ย่อยสลายได้</span> Battle Card<small>FIELD SALES · รับมือข้อโต้แย้ง + ปิดการขาย</small></div>
+    <div class="meta"><b>หน้า 2 / 2 — ปิดดีล</b>ทีม: ณัฐนันท์ · ธฤต · เนติพงษ์<br>มิ.ย. 2569 · ใช้ภายใน</div>
+  </div>
+
+  <!-- 5. Objection handling -->
+  <div class="blk">
+    <div class="blk-h"><span class="n">5</span> ลูกค้าพูดแบบนี้ → เราตอบแบบนี้ <span class="line"></span></div>
+    <div class="qa">
+      <div class="qa-row"><div class="qa-q">แพงกว่าถุงเดิม</div><div class="qa-a">เทียบ <b>ต้นทุนรวม</b> (ค่าปรับ + EPR 1.2–1.5฿/แพ็ค + ความเสี่ยงแบรนด์) ไม่ใช่บาท/กก. + ใช้ <b>Gauge</b> ลดส่วนต่างเหลือ ~7%</div></div>
+      <div class="qa-row"><div class="qa-q">ของจีนถูกกว่าเยอะ</div><div class="qa-a">จีน <b>ไม่มีใบรับรองไทย + ไม่มีบริการ + lead time ยาว</b> — เราผลิตในไทย ส่งเร็ว มีเซอร์ มีทีมดูแลถึงหน้างาน</div></div>
+      <div class="qa-row"><div class="qa-q">ขอลองก่อนได้ไหม</div><div class="qa-a">ดีเลยครับ เสนอ <b>Pilot 1–3 เดือน</b> ตั้ง KPI ร่วม (ข้อร้องเรียน/ความเสียหาย/OTIF) ผ่านแล้วค่อยทำสัญญาปี</div></div>
+      <div class="qa-row"><div class="qa-q">มั่นใจได้ไงว่าย่อยจริง</div><div class="qa-a">มี <b>ใบรับรอง EN 13432 + Test Report</b> ระบุเงื่อนไขการ compost ชัดเจน — ไม่ใช่เคลมลอยๆ</div></div>
+      <div class="qa-row"><div class="qa-q">ทำจากวัสดุอะไร</div><div class="qa-a">เกรด compostable (PBAT+PBS) ที่มีใบรับรองครับ — <b>แล้วดึงกลับไปที่ผลลัพธ์</b>: "สำคัญคือมันย่อยได้จริง + มีเอกสารให้ฝ่าย ESG พี่"</div></div>
+    </div>
+  </div>
+
+  <div class="two">
+    <!-- 6. Competitor counter -->
+    <div class="blk">
+      <div class="blk-h"><span class="n">6</span> เจอคู่แข่ง พูดอะไร <span class="line"></span></div>
+      <div class="cc">
+        <div class="cc-item"><div class="who">TPBI</div><div class="say">เรามีช่องในเครือ CP + ต้นทุนเรซินกลุ่ม CP</div></div>
+        <div class="cc-item"><div class="who">Thantawan</div><div class="say">เรา capacity ใหญ่กว่า + field sales ทุกภาค</div></div>
+        <div class="cc-item"><div class="who">นำเข้าจีน</div><div class="say">เซอร์ไทย + บริการ + ส่งเร็ว ไม่ต้องรอ</div></div>
+        <div class="cc-item"><div class="who">SCG</div><div class="say">เขาเล่นกระดาษ/recyclable — เราคือถุงหูหิ้ว/กระตุก compostable เนื้อฟิล์ม</div></div>
+      </div>
+    </div>
+
+    <!-- 7. Price ladder -->
+    <div class="blk">
+      <div class="blk-h"><span class="n">7</span> โซนราคา + Gauge <span class="line"></span></div>
+      <div class="ladder">
+        <div class="lad"><div class="bar" style="width:78px;background:linear-gradient(90deg,var(--forest),var(--lime))"></div><div class="txt"><b>0–5%</b> ปิดง่าย (สเปคใกล้+เซอร์)</div></div>
+        <div class="lad"><div class="bar" style="width:50px;background:linear-gradient(90deg,var(--teal),#7fd4d3)"></div><div class="txt"><b>5–12%</b> ได้เมื่อมี ESG KPI</div></div>
+        <div class="lad"><div class="bar" style="width:24px;background:linear-gradient(90deg,var(--coral),var(--amber))"></div><div class="txt"><b>&gt;12%</b> ยาก (เฉพาะ Pilot)</div></div>
+      </div>
+      <div class="oc" style="border-top-color:var(--amber);margin-top:8px;padding:8px 11px">
+        <h4 style="font-size:.78rem">🔧 Gauge: 15→10 ไมครอน</h4>
+        <p>ถุงกระตุกลดความหนา ตัดส่วนต่าง <b>+25% → +7%</b> โดยยังใช้งานได้ → ดึงเข้าโซนที่ลูกค้ายอมจ่าย</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. Close -->
+  <div class="blk">
+    <div class="blk-h"><span class="n">8</span> ปิดการขาย — ขั้นต่อไปที่ต้องได้ <span class="line"></span></div>
+    <div class="steps">
+      <div class="step"><div class="sn"></div><p>ขอส่ง Sample Kit + เอกสารสเปค ให้ QA / Packaging</p></div>
+      <div class="step"><div class="sn"></div><p>นัด Test ร่วม + ตั้ง KPI Pilot</p></div>
+      <div class="step"><div class="sn"></div><p>ปิด Pilot PO 1–3 ด. → สัญญาปี (Framework)</p></div>
+    </div>
+  </div>
+
+  <!-- 9. Targets + DMU -->
+  <div class="two">
+    <div class="blk" style="margin-bottom:0">
+      <div class="blk-h"><span class="n">9</span> ลูกค้าเป้าหมาย <span class="line"></span></div>
+      <div class="tags">
+        <span class="tag">Big C</span><span class="tag">Tops</span><span class="tag">GO Wholesale</span><span class="tag">Foodland</span><span class="tag">Villa</span>
+        <span class="tag hot">McDonald's ~25 ตัน/ด.</span><span class="tag hot">KFC ~45 ตัน/ด.</span><span class="tag">MK</span><span class="tag">CP AXTRA / ในเครือ</span>
+      </div>
+    </div>
+    <div class="blk" style="margin-bottom:0">
+      <div class="blk-h"><span class="n">10</span> เข้าให้ครบ (DMU) <span class="line"></span></div>
+      <div class="tags">
+        <span class="tag hot">Sustainability / CSR</span><span class="tag">จัดซื้อ</span><span class="tag">Packaging Dev</span><span class="tag">QA/QC</span><span class="tag">ปฏิบัติการ</span><span class="tag">การเงิน</span>
+      </div>
+      <p class="fine">เริ่มที่ Sustainability (คน "อยาก" เปลี่ยน) ดึงจัดซื้อตาม</p>
+    </div>
+  </div>
+
+  <div class="pg-foot"><span>⚠️ เคลมย่อยสลาย/ไมโครพลาสติก อ้างอิงใบรับรองฉบับล่าสุดเสมอ + ระบุเงื่อนไขการ compost</span><span>หน้า 2 / 2</span></div>
+</div>
+
+<script>
+// keyboard shortcut: Ctrl/Cmd+P already prints; nothing else needed
+</script>
+</body>
+</html>
